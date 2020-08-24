@@ -1,21 +1,22 @@
 package com.testing.class1;
 
-import com.testing.driver.GoogleDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class ChromeDemo {
+public class IEDemo {
     public static void main(String[] args) {
+
         //指定webdriver的路径，用相对路径，方便项目移植给别人用
-//        System.setProperty("webdriver.chrome.driver","webDrivers/chromedriver.exe");
-//        //实例化driver完成webdriver的启动。
-//        //启动浏览器
-//        WebDriver driver=new ChromeDriver();
-        GoogleDriver gg=new GoogleDriver("webDrivers/chromedriver.exe");
-        WebDriver driver = gg.getdriver();
+        System.setProperty("webdriver.ie.driver","webDrivers/IEDriverServer.exe");
+        //实例化driver完成webdriver的启动。
+        //有些同学可能firefox没装在c盘默认路径会需要加上如下代码指定firefox的启动路径，或者直接将firefox扔进环境变量path
+//        System.setProperty("webdriver.firefox.bin","");
+        //启动浏览器
+        WebDriver driver=new InternetExplorerDriver();
         //访问被测网页
         driver.get("https://www.baidu.com");
 //        driver.navigate().to("https://www.qq.com/");
@@ -72,7 +73,5 @@ public class ChromeDemo {
         //代码最后一句记得加上driver.quit释放资源关闭浏览器。
         driver.quit();
 
-
     }
-
 }
