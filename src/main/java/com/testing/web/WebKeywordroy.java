@@ -1,15 +1,16 @@
 package com.testing.web;
 
-import com.testing.driver.FFDriver;
-import com.testing.driver.GoogleDriver;
-import com.testing.driver.IEDriver;
+import com.testing.common.MysqlUtils;
+import com.testing.royDriver.FFDriver;
+import com.testing.royDriver.GoogleDriver;
+import com.testing.royDriver.IEDriver;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class WebKeyword {
@@ -151,11 +152,24 @@ public class WebKeyword {
                 element=driver.findElement(By.cssSelector(locator));
                 break;
         }
-        assert element != null;
         element.clear();
         element.sendKeys(content);
 
     }
+
+    /**
+     *重载一个input方法，默认使用xpath进行定位输入。
+     */
+    public void input(String xpath,String content){
+        try {
+            driver.findElement(By.xpath(xpath)).clear();
+            driver.findElement(By.xpath(xpath)).sendKeys(content);
+        } catch (Exception e) {
+            System.out.println("向"+xpath+"元素中输入内容失败");
+            e.printStackTrace();
+        }
+    }
+
 
     /**
      * 输出元素的坐标位置,并返回
@@ -184,31 +198,164 @@ public class WebKeyword {
             e.printStackTrace();
         }
     }
-    public void clickById(String id){
-        try {
-            driver.findElement(By.name(id));
-        } catch (Exception e) {
-            System.out.println("点击"+id+"元素失败");
-            e.printStackTrace();
-        }
-    }
-    public void clickByXpath(String xpath){
+
+    /**
+     * 通过xpath定位元素并且进行点击。
+     * @param xpath
+     */
+    public void click(String xpath){
         try {
             driver.findElement(By.xpath(xpath)).click();
         } catch (Exception e) {
-            System.out.println("点击" + xpath + "元素失败");
+            System.out.println("点击"+xpath+"元素失败");
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 鼠标移动到某个元素上去悬停
+     */
+    public void hover(String xpath){
+        try {
+            Actions act =new Actions(driver);
+            act.moveToElement(driver.findElement(By.xpath(xpath))).perform();
+        } catch (Exception e) {
+            System.out.println("移动到"+xpath+"元素悬停失败");
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 通过浏览器页面的标题来进行窗口的切换
+     * @param expectedTitle
+     */
+    public void switchWindowByTitle(String expectedTitle){
+        //先获取所有的句柄
+        Set<String> windowHandles = driver.getWindowHandles();
+        //遍历所有的句柄，尝试切换窗口获取它的标题，如果标题和预期一致就是需要的窗口
+        for (String windowHandle : windowHandles) {
+            driver.switchTo().window(windowHandle);
+            //判断当前窗口的标题是否等于预期标题
+            if(driver.getTitle().equals(expectedTitle)){
+                break;
+            }
+        }
+    }
+
+    /**
+     * 基于xpath切换Iframe
+     * @param xpath
+     */
+    public void switchIframe(String xpath){
+        try {
+            driver.switchTo().frame(driver.findElement(By.xpath(xpath)));
+        } catch (Exception e) {
+            System.out.println("切换iframe"+xpath+"失败");
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 直接执行js脚本
+     * @param jsScript
+     */
+    public void runJs(String jsScript){
+        //用强转的方式，将driver转换为js执行器类
+        try {
+            JavascriptExecutor jsRunner=(JavascriptExecutor)driver;
+            jsRunner.executeScript(jsScript);
+        } catch (Exception e) {
+            System.out.println("执行js脚本"+jsScript+"失败");
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * 定位元素并且通过元素来进行相应操作。
+     * 因为document语法定位元素不好用，当然可以用document.quereSelector通过css选择器定位
+     */
+    public void runJsWithElement(String xpath,String jsScript){
+        try {
+            //先定位元素
+            WebElement element = driver.findElement(By.xpath(xpath));
+            JavascriptExecutor jsRunner=(JavascriptExecutor)driver;
+            //使用元素时，jsScript中用arguments[0]调用后面的参数列表中的第1个元素
+            jsRunner.executeScript(jsScript,element);
+        } catch (Exception e) {
+            System.out.println("执行js脚本"+jsScript+"失败");
+            e.printStackTrace();
+        }
+    }
+
+
+
+    /**
+     * 输入xpath用于批量进行元素定位并且将元素的text内容遍历存储到map中
+     * 通过foreach循环进行list的遍历
+     * @param xpath
+     * @return
+     */
+    public List<Map<String,String>> getAllGoodsName(String xpath){
+        List<WebElement> elements = driver.findElements(By.xpath(xpath));
+        //创建一个list用于存储数据
+        List<Map<String,String>> webData=new ArrayList<>();
+        //针对每一个数据，存一个map并且加到list中去
+        for (WebElement element : elements) {
+            //创建一个map用于存储商品名称键值对
+            Map<String,String> lidata=new HashMap<>();
+            lidata.put("goods_name",element.getText());
+            //将每个商品的名称键值对放到list里面去。
+            webData.add(lidata);
+        }
+        System.out.println("web端获取到的数据是"+webData);
+        return webData;
+    }
+
+    /**
+     * 基于xpath拼接，遍历各个商品元素，获取名称和价格，存到list<map>中。
+     * @return
+     */
+    public List<Map<String,String>> getGoodsNameandPrice(){
+        //获取一共多少个商品，也就是获取有多少个li元素
+        List<WebElement> liList = driver.findElements(By.xpath("//div[@class='shop-list-splb p']/ul/li"));
+        int goodsCount=liList.size();
+        List<Map<String,String>> webDatas=new ArrayList<>();
+        //基于xpath遍历每个元素获取它的商品名和价格
+        for(int goodsNum=1;goodsNum<=goodsCount;goodsNum++) {
+            //获取对应下标的商品的名称
+            String goodsName=driver.findElement(By.xpath("//div[@class='shop-list-splb p']/ul/li["+goodsNum+"]//div[@class='shop_name2']")).getText();
+            //获取对应下表的商品的价格
+            String price=driver.findElement(By.xpath("//div[@class='shop-list-splb p']/ul/li[" + goodsNum + "]//div[@class='price-tag']/span[@class='now']/em[not(@class)]")).getText();
+            Map<String,String> goodsdata=new HashMap<>();
+            goodsdata.put("goods_name",goodsName);
+            goodsdata.put("shop_price",price);
+            webDatas.add(goodsdata);
+        }
+        System.out.println("页面上获取到商品名称和价格数据是："+webDatas);
+        return  webDatas;
 
     }
-    public void clickByName(String name){
-        try {
-            driver.findElement(By.name(name)).click();
-        } catch (Exception e) {
-            System.out.println("点击" + name + "元素失败");
-            e.printStackTrace();
-        }
 
+    /**
+     * 对比页面上的商品和数据库上的商品数据
+     * @param sql
+     * @return
+     */
+    public boolean compareDbAndWebData(String sql){
+        boolean result=false;
+        //获取页面中的数据
+        List<Map<String, String>> webDatas = getGoodsNameandPrice();
+        //查找数据库中的内容
+        MysqlUtils roy=new MysqlUtils();
+        roy.createConnection();
+        List<Map<String, String>> dbDatas = roy.queryDatas(sql);
+        System.out.println("数据库查到的数据是"+dbDatas);
+        //如果两个列表互相包含，说明数据是一模一样的
+        if(dbDatas.containsAll(webDatas)&&webDatas.containsAll(dbDatas)){
+            System.out.println("数据库和页面查询数据一致");
+            result=true;
+        }
+        return result;
     }
 
     /**
@@ -432,4 +579,11 @@ public class WebKeyword {
         driver.quit();
     }
 
+    /**
+     * 获取实例化的driver。
+     * @return
+     */
+    public WebDriver getDriver() {
+        return driver;
+    }
 }

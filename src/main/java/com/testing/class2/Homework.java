@@ -19,16 +19,10 @@ public class Homework {
         web.halt("5");
         web.assertTitleContains("我的账户-开源商城");
         web.halt("1");
-        web.click("class","home");
+        web.clickByXpath("\"//a[text()='首页']\"");
         web.halt("1");
         //web.input("class","ecsc-search-input","vivo");
         //web.click("xpath","/html/body/div[4]/div/div[2]/div[2]/ul/li[1]");
-        web.click("xpath","/html/body/div[4]/div[2]/div[2]/a[1]/div[1]");
-        web.halt("1");
-        web.click("class","paybybill buy_button");
-        web.halt("1");
-        web.assertPageContains("购物车结算-开源商城");
-        web.halt("1");
-        web.closeBrowser();
+
     }
 }
