@@ -184,6 +184,7 @@ public class WebKeyword {
             e.printStackTrace();
         }
     }
+    //通过id元素点击
     public void clickById(String id){
         try {
             driver.findElement(By.name(id));
@@ -192,6 +193,7 @@ public class WebKeyword {
             e.printStackTrace();
         }
     }
+    //通过xpath元素点击
     public void clickByXpath(String xpath){
         try {
             driver.findElement(By.xpath(xpath)).click();
@@ -201,6 +203,7 @@ public class WebKeyword {
         }
 
     }
+    //通过name素点击
     public void clickByName(String name){
         try {
             driver.findElement(By.name(name)).click();
