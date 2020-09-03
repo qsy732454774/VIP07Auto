@@ -2,6 +2,7 @@ package com.testing.web;
 
 import com.google.common.io.Files;
 import com.testing.common.AutoLogger;
+import com.testing.common.ExcelWriter;
 import com.testing.common.MysqlUtils;
 import com.testing.webDriver.FFDriver;
 import com.testing.webDriver.GoogleDriver;
@@ -19,37 +20,64 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class WebKeyword {
+public class DDTOfWeb {
 
     //成员变量driver，用于各个方法使用浏览器对象进行操作。
     public WebDriver driver;
+    //excelwriter对象，用于每个方法执行的时候，完成结果的写入。
+    public ExcelWriter results;
+    //用于记录当前操作的行号
+    public int writeLine;
+    //记录写入的列，固定为10
+    public static final int RES_COL=10;
+    public static final String PASS="pass";
+    public static final String FAIL="fail";
+
+
+    //传参完成excelwriter对象的赋值。
+    public DDTOfWeb(ExcelWriter result){
+        results=result;
+    }
+    //设置当前操作的行号
+    public void setLine(int line){
+        writeLine=line;
+    }
 
     /**
      * 打开浏览器的方法，可以是通过输入浏览器类型启动对应的浏览器
      * chrome firefox IE
      */
     public void openBrowser(String browserType) {
-        switch (browserType) {
-            case "chrome":
-                GoogleDriver gg = new GoogleDriver("webDrivers/chromedriver.exe");
-                driver = gg.getdriver();
-                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                break;
-            case "firefox":
-                FFDriver ff = new FFDriver("", "webDrivers/geckodriver.exe");
-                driver = ff.getdriver();
-                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                break;
-            case "ie":
-                IEDriver ie = new IEDriver("webDrivers/IEDriverServer.exe");
-                driver = ie.getdriver();
-                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                break;
-            default:
-                GoogleDriver defaultB = new GoogleDriver("webDrivers/chromedriver.exe");
-                driver = defaultB.getdriver();
-                driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-                break;
+        try {
+            switch (browserType) {
+                case "chrome":
+                    GoogleDriver gg = new GoogleDriver("webDrivers/chromedriver.exe");
+                    driver = gg.getdriver();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    results.writeCell(writeLine,RES_COL,PASS);
+                    break;
+                case "firefox":
+                    FFDriver ff = new FFDriver("", "webDrivers/geckodriver.exe");
+                    driver = ff.getdriver();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    results.writeCell(writeLine,RES_COL,PASS);
+                    break;
+                case "ie":
+                    IEDriver ie = new IEDriver("webDrivers/IEDriverServer.exe");
+                    driver = ie.getdriver();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    results.writeCell(writeLine,RES_COL,PASS);
+                    break;
+                default:
+                    GoogleDriver defaultB = new GoogleDriver("webDrivers/chromedriver.exe");
+                    driver = defaultB.getdriver();
+                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    results.writeCell(writeLine,RES_COL,PASS);
+                    break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -59,8 +87,10 @@ public class WebKeyword {
     public void maximize() {
         try {
             driver.manage().window().maximize();
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             AutoLogger.log.info("最大化浏览器失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             e.printStackTrace();
         }
     }
@@ -78,8 +108,10 @@ public class WebKeyword {
             driver.manage().window().setPosition(new Point(x, y));
             //设置浏览器的长宽
             driver.manage().window().setSize(new Dimension(xwidth, yheight));
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (NumberFormatException e) {
             AutoLogger.log.info("设置浏览器大小失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             e.printStackTrace();
         }
 
@@ -93,9 +125,11 @@ public class WebKeyword {
     public void visitURL(String url) {
         try {
             driver.get(url);
+            results.writeCell(writeLine,RES_COL,PASS);
             AutoLogger.log.info("访问网页" + url );
         } catch (Exception e) {
             AutoLogger.log.info("访问网页" + url + "失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             e.printStackTrace();
         }
     }
@@ -112,10 +146,12 @@ public class WebKeyword {
             WebElement element = driver.findElement(By.cssSelector(css));
             element.clear();
             element.sendKeys(content);
+            results.writeCell(writeLine,RES_COL,PASS);
             result=true;
         } catch (Exception e) {
             AutoLogger.log.info("向" + css + "元素输入内容失败");
             e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             result=false;
         }finally {
             return result;
@@ -126,48 +162,53 @@ public class WebKeyword {
     /**
      * 基于method的值，来选择定位的方式，并且使用locator作为定位表达式。
      * 例如：<input type="text" class="s_ipt" name="wd" id="kw" maxlength="100" autocomplete="off">
-     *     method 属性   locator 表达式  content 输入的值
      * @param method 方法类型
      * @param locator  定位表达式
      */
     public void input(String method,String locator,String content){
-        WebElement element=null;
-        switch (method){
-            //基于元素的id属性进行定位，实际上用的就是#id通过css选择器定位。  用kw.
-            case "id":
-                element= driver.findElement(By.id(locator));
-                break;
-            //基于元素name属性定位。  用 wd
-            case "name":
-                element=driver.findElement(By.name(locator));
-                break;
-            //基于元素标签名定位，就是input。
-            case "tagname":
-                element=driver.findElement(By.tagName(locator));
-                break;
-            //基于css样式class属性定位， 就是"s_ipt"
-            case "classname":
-                element=driver.findElement(By.className(locator));
-                break;
-            //基于超链接的文本内容定位，只能用于a元素
-            case "linktext":
-                element= driver.findElement(By.linkText(locator));
-                break;
-            //基于超链接的部分文本内容定位，只能用于a元素
-            case "partiallinktext":
-                element=driver.findElement(By.partialLinkText(locator));
-                break;
-            //xpath定位，最大优势，可以用text()文本定位
-            case "xpath":
-                element=driver.findElement(By.xpath(locator));
-                break;
-            //css选择器定位。 速度快，语法简洁。
-            case "css":
-                element=driver.findElement(By.cssSelector(locator));
-                break;
+        try {
+            WebElement element=null;
+            switch (method){
+                //基于元素的id属性进行定位，实际上用的就是#id通过css选择器定位。  用kw.
+                case "id":
+                   element= driver.findElement(By.id(locator));
+                   break;
+                   //基于元素name属性定位。  用 wd
+                case "name":
+                    element=driver.findElement(By.name(locator));
+                    break;
+                    //基于元素标签名定位，就是input。
+                case "tagname":
+                    element=driver.findElement(By.tagName(locator));
+                    break;
+                    //基于css样式class属性定位， 就是"s_ipt"
+                case "classname":
+                    element=driver.findElement(By.className(locator));
+                    break;
+                    //基于超链接的文本内容定位，只能用于a元素
+                case "linktext":
+                    element= driver.findElement(By.linkText(locator));
+                    break;
+                    //基于超链接的部分文本内容定位，只能用于a元素
+                case "partiallinktext":
+                    element=driver.findElement(By.partialLinkText(locator));
+                    break;
+                    //xpath定位，最大优势，可以用text()文本定位
+                case "xpath":
+                    element=driver.findElement(By.xpath(locator));
+                    break;
+                    //css选择器定位。 速度快，语法简洁。
+                case "css":
+                    element=driver.findElement(By.cssSelector(locator));
+                    break;
+            }
+            element.clear();
+            element.sendKeys(content);
+            results.writeCell(writeLine,RES_COL,PASS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
-        element.clear();
-        element.sendKeys(content);
 
     }
 
@@ -178,9 +219,11 @@ public class WebKeyword {
         try {
             driver.findElement(By.xpath(xpath)).clear();
             driver.findElement(By.xpath(xpath)).sendKeys(content);
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             AutoLogger.log.info("向"+xpath+"元素中输入内容失败");
             saveErrShot("input方法"+xpath.replace("/","!"));
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             e.printStackTrace();
         }
     }
@@ -195,9 +238,11 @@ public class WebKeyword {
         try {
             location = element.getLocation();
             AutoLogger.log.info(css + "元素的位置是" + location);
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             e.printStackTrace();
             AutoLogger.log.info("没有定位到元素"+css);
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
         return location;
     }
@@ -208,9 +253,11 @@ public class WebKeyword {
     public void clickByCss(String css) {
         try {
             driver.findElement(By.cssSelector(css)).click();
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             AutoLogger.log.info("点击" + css + "元素失败");
             e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -222,11 +269,13 @@ public class WebKeyword {
         try {
             driver.findElement(By.xpath(xpath)).click();
             AutoLogger.log.info("点击"+xpath+"元素");
+            results.writeCell(writeLine,RES_COL,PASS);
             return true;
         } catch (Exception e) {
             AutoLogger.log.info("点击"+xpath+"元素失败");
             e.printStackTrace();
             saveErrShot("click方法"+xpath.replace("/","!"));
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             return false;
         }
     }
@@ -238,8 +287,10 @@ public class WebKeyword {
         try {
             Actions act =new Actions(driver);
             act.moveToElement(driver.findElement(By.xpath(xpath))).perform();
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             AutoLogger.log.info("移动到"+xpath+"元素悬停失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             e.printStackTrace();
         }
     }
@@ -249,15 +300,21 @@ public class WebKeyword {
      * @param expectedTitle
      */
     public void switchWindowByTitle(String expectedTitle){
-        //先获取所有的句柄
-        Set<String> windowHandles = driver.getWindowHandles();
-        //遍历所有的句柄，尝试切换窗口获取它的标题，如果标题和预期一致就是需要的窗口
-        for (String windowHandle : windowHandles) {
-            driver.switchTo().window(windowHandle);
-            //判断当前窗口的标题是否等于预期标题
-            if(driver.getTitle().equals(expectedTitle)){
-                break;
+        try {
+            //先获取所有的句柄
+            Set<String> windowHandles = driver.getWindowHandles();
+            //遍历所有的句柄，尝试切换窗口获取它的标题，如果标题和预期一致就是需要的窗口
+            for (String windowHandle : windowHandles) {
+                driver.switchTo().window(windowHandle);
+                //判断当前窗口的标题是否等于预期标题
+                if(driver.getTitle().equals(expectedTitle)){
+                    break;
+                }
             }
+            results.writeCell(writeLine,RES_COL,PASS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -268,8 +325,10 @@ public class WebKeyword {
     public void switchIframe(String xpath){
         try {
             driver.switchTo().frame(driver.findElement(By.xpath(xpath)));
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             AutoLogger.log.info("切换iframe"+xpath+"失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             e.printStackTrace();
         }
     }
@@ -280,9 +339,11 @@ public class WebKeyword {
     public void switchUpIframe(){
         try {
             driver.switchTo().parentFrame();
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             e.printStackTrace();
             AutoLogger.log.info("切换父级iframe失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -292,9 +353,11 @@ public class WebKeyword {
     public void switchOutIframe(){
         try {
             driver.switchTo().defaultContent();
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             e.printStackTrace();
             AutoLogger.log.info("切换到根层级失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -307,9 +370,11 @@ public class WebKeyword {
         try {
             JavascriptExecutor jsRunner=(JavascriptExecutor)driver;
             jsRunner.executeScript(jsScript);
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             AutoLogger.log.info("执行js脚本"+jsScript+"失败");
             e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -331,8 +396,10 @@ public class WebKeyword {
                     sel.selectByVisibleText(content);
                     break;
             }
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
 
     }
@@ -347,8 +414,10 @@ public class WebKeyword {
             WebElement selele = driver.findElement(By.xpath(xpath));
             Select sel=new Select(selele);
             sel.selectByValue(Value);
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -363,9 +432,11 @@ public class WebKeyword {
             JavascriptExecutor jsRunner=(JavascriptExecutor)driver;
             //使用元素时，jsScript中用arguments[0]调用后面的参数列表中的第1个元素
             jsRunner.executeScript(jsScript,element);
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (Exception e) {
             AutoLogger.log.info("执行js脚本"+jsScript+"失败");
             e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -450,8 +521,10 @@ public class WebKeyword {
         int millis = (int) (seconds * 1000);
         try {
             Thread.sleep(millis);
+            results.writeCell(writeLine,RES_COL,PASS);
         } catch (InterruptedException e) {
             e.printStackTrace();
+            results.writeFailCell(writeLine,RES_COL,FAIL);
         }
     }
 
@@ -477,7 +550,7 @@ public class WebKeyword {
     public void comWait(String xpath) {
         WebDriverWait ewait = new WebDriverWait(driver, 10);
         ewait.until(new ExpectedCondition<Boolean>() {
-                        //自定义重写apply方法，返回Boolean类型的结果：某个元素的isEnabled状态，是可用。
+            //自定义重写apply方法，返回Boolean类型的结果：某个元素的isEnabled状态，是可用。
                         public Boolean apply(WebDriver d) {
                             return d.findElement(By.xpath(xpath)).isEnabled();
                         }
@@ -509,10 +582,13 @@ public class WebKeyword {
         String pageSrc = driver.getPageSource();
         if (pageSrc.contains(expect)) {
             AutoLogger.log.info("断言网页源码中包含" + expect + "成功");
+            results.writeCell(writeLine,RES_COL,PASS);
             return true;
         } else {
             AutoLogger.log.info("断言网页源码中包含" + expect + "失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             return false;
+
         }
     }
 
@@ -530,18 +606,22 @@ public class WebKeyword {
             case "包含":
                 if (title.contains(expect)) {
                     AutoLogger.log.info("断言标题中包含" + expect + "成功");
+                    results.writeCell(writeLine,RES_COL,PASS);
                     result = true;
                 } else {
                     AutoLogger.log.info("断言标题中包含" + expect + "失败");
+                    results.writeFailCell(writeLine,RES_COL,FAIL);
                     result = false;
                 }
                 break;
             case "相等":
                 if (title.equals(expect)) {
                     AutoLogger.log.info("断言标题为" + expect + "成功");
+                    results.writeCell(writeLine,RES_COL,PASS);
                     result = true;
                 } else {
                     AutoLogger.log.info("断言标题为" + expect + "失败");
+                    results.writeFailCell(writeLine,RES_COL,FAIL);
                     result = false;
                 }
                 break;
@@ -585,9 +665,11 @@ public class WebKeyword {
         boolean result = false;
         if (title.contains(expect)) {
             AutoLogger.log.info("断言标题中包含" + expect + "成功");
+            results.writeCell(writeLine,RES_COL,PASS);
             result = true;
         } else {
             AutoLogger.log.info("断言标题中包含" + expect + "失败");
+            results.writeFailCell(writeLine,RES_COL,FAIL);
             result = false;
         }
         return result;
@@ -611,9 +693,11 @@ public class WebKeyword {
                 //取可变参数部分输入的第一个参数作为判断的预期结果。
                 for (String s : expect) {
                     if (actual.contains(s)) {
+                        results.writeCell(writeLine,RES_COL,PASS);
                         AutoLogger.log.info("包含预期结果" + s);
                     } else {
                         AutoLogger.log.info("不包含预期结果" + s);
+                        results.writeFailCell(writeLine,RES_COL,FAIL);
                     }
                 }
             }
@@ -628,6 +712,7 @@ public class WebKeyword {
     /**
      * 基于xpath表达式获取元素的指定属性值，
      * 并且如果输入了预期结果，判断预期结果是否和获取属性值相等，如果没有输入，则只返回属性值。
+     *
      * @param xpath  元素定位xpath变道时
      * @param expect String ...
      * @return

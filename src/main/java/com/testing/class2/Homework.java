@@ -15,11 +15,11 @@ public class Homework {
         web.halt("1");
         web.input("name","verify_code","1234");
         web.halt("1");
-        web.clickByName("sbtbutton");
+        web.click("//a[@name='sbtbutton']");
         web.halt("5");
         web.assertTitleContains("我的账户-开源商城");
         web.halt("1");
-        web.clickByXpath("\"//a[text()='首页']\"");
+        web.click("\"//a[text()='首页']\"");
         web.halt("1");
         //web.input("class","ecsc-search-input","vivo");
         //web.click("xpath","/html/body/div[4]/div/div[2]/div[2]/ul/li[1]");
