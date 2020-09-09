@@ -14,10 +14,10 @@ public class xiaobuTest {
         xiaobu.setCapability("platformName","Android");
         xiaobu.setCapability("platformVersion","5.1");
         xiaobu.setCapability("appPackage","com.xiaobu121.xiaobu.xiaobu_android");
-        xiaobu.setCapability("appActivity","com.xiaobu121.xiaobu.xiaobu_android.icon_default");
-        xiaobu.setCapability("noReset",true);
+        xiaobu.setCapability("appActivity","com.xiaobu121.xiaobu.xiaobu_android.splash.activity.SplashActivity");
+        //xiaobu.setCapability("noReset",true);
         //填写需要连接的服务器
         URL serverURL = new URL("http://127.0.0.1:4723/wb/hub");
-        AndroidDriver driver=new AndroidDriver(serverURL,xiaobu);
+        AndroidDriver driver = new AndroidDriver(serverURL,xiaobu);
     }
 }

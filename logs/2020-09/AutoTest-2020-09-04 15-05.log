@@ -1,0 +1,8 @@
+15:05:04  [INFO ] : 访问网页http://www.testingedu.com.cn:8000/Admin/Admin/login
+15:05:07  [INFO ] : 点击//input[@name='submit']元素
+15:05:07  [INFO ] : 点击//a[text()='商城']元素
+15:05:08  [INFO ] : 点击//div[@title='添加商品']元素
+15:05:12  [INFO ] : 点击//*[@id='is_free_shipping_label_1']元素
+15:05:12  [INFO ] : 点击//a[@id='submit']元素
+15:05:20  [INFO ] : 访问网页http://www.testingedu.com.cn:8000/Home/user/login.html
+15:05:20  [INFO ] : 点击//a[@name='sbtbutton']元素

@@ -1,6 +1,5 @@
 package com.testing.class5;
 
-import com.testing.class3.TpshopTest;
 import com.testing.class4.ShopAdminTest;
 import com.testing.common.AutoLogger;
 import com.testing.web.WebKeyword;

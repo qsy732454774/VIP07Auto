@@ -1,11 +1,10 @@
 package com.testing.pageAdmin;
 
+import com.testing.web.WebKeyword;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
-import com.testing.web.WebKeyword;
 
 public class AddGoodsPage {
 	public WebKeyword kw;
@@ -49,7 +48,7 @@ public class AddGoodsPage {
 	public AddGoodsPage(WebKeyword keyword) {
 		kw=keyword;
 	}
-	
+
 	public void load() {
 		kw.visitURL(Url);
 		//使用selenium的pageFactory，完成元素的初始化

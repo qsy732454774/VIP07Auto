@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.testing.web.WebKeyword;
-
 public class AdminLoginPage {
 	//成员变量
 	public WebDriver admin;

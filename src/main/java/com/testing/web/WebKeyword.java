@@ -106,27 +106,20 @@ public class WebKeyword {
      * @param css
      * @param content
      */
-    public boolean inputByCss(String css, String content) {
-        boolean result=false;
+    public void inputByCss(String css, String content) {
         try {
             WebElement element = driver.findElement(By.cssSelector(css));
             element.clear();
             element.sendKeys(content);
-            result=true;
         } catch (Exception e) {
             AutoLogger.log.info("向" + css + "元素输入内容失败");
             e.printStackTrace();
-            result=false;
-        }finally {
-            return result;
         }
-
     }
 
     /**
      * 基于method的值，来选择定位的方式，并且使用locator作为定位表达式。
      * 例如：<input type="text" class="s_ipt" name="wd" id="kw" maxlength="100" autocomplete="off">
-     *     method 属性   locator 表达式  content 输入的值
      * @param method 方法类型
      * @param locator  定位表达式
      */
@@ -135,33 +128,33 @@ public class WebKeyword {
         switch (method){
             //基于元素的id属性进行定位，实际上用的就是#id通过css选择器定位。  用kw.
             case "id":
-                element= driver.findElement(By.id(locator));
-                break;
-            //基于元素name属性定位。  用 wd
+               element= driver.findElement(By.id(locator));
+               break;
+               //基于元素name属性定位。  用 wd
             case "name":
                 element=driver.findElement(By.name(locator));
                 break;
-            //基于元素标签名定位，就是input。
+                //基于元素标签名定位，就是input。
             case "tagname":
                 element=driver.findElement(By.tagName(locator));
                 break;
-            //基于css样式class属性定位， 就是"s_ipt"
+                //基于css样式class属性定位， 就是"s_ipt"
             case "classname":
                 element=driver.findElement(By.className(locator));
                 break;
-            //基于超链接的文本内容定位，只能用于a元素
+                //基于超链接的文本内容定位，只能用于a元素
             case "linktext":
                 element= driver.findElement(By.linkText(locator));
                 break;
-            //基于超链接的部分文本内容定位，只能用于a元素
+                //基于超链接的部分文本内容定位，只能用于a元素
             case "partiallinktext":
                 element=driver.findElement(By.partialLinkText(locator));
                 break;
-            //xpath定位，最大优势，可以用text()文本定位
+                //xpath定位，最大优势，可以用text()文本定位
             case "xpath":
                 element=driver.findElement(By.xpath(locator));
                 break;
-            //css选择器定位。 速度快，语法简洁。
+                //css选择器定位。 速度快，语法简洁。
             case "css":
                 element=driver.findElement(By.cssSelector(locator));
                 break;
@@ -217,18 +210,18 @@ public class WebKeyword {
     /**
      * 通过xpath定位元素并且进行点击。
      * @param xpath
+     * @return
      */
     public boolean click(String xpath){
         try {
             driver.findElement(By.xpath(xpath)).click();
             AutoLogger.log.info("点击"+xpath+"元素");
-            return true;
         } catch (Exception e) {
             AutoLogger.log.info("点击"+xpath+"元素失败");
             e.printStackTrace();
             saveErrShot("click方法"+xpath.replace("/","!"));
-            return false;
         }
+        return false;
     }
 
     /**
@@ -477,7 +470,7 @@ public class WebKeyword {
     public void comWait(String xpath) {
         WebDriverWait ewait = new WebDriverWait(driver, 10);
         ewait.until(new ExpectedCondition<Boolean>() {
-                        //自定义重写apply方法，返回Boolean类型的结果：某个元素的isEnabled状态，是可用。
+            //自定义重写apply方法，返回Boolean类型的结果：某个元素的isEnabled状态，是可用。
                         public Boolean apply(WebDriver d) {
                             return d.findElement(By.xpath(xpath)).isEnabled();
                         }
@@ -628,6 +621,7 @@ public class WebKeyword {
     /**
      * 基于xpath表达式获取元素的指定属性值，
      * 并且如果输入了预期结果，判断预期结果是否和获取属性值相等，如果没有输入，则只返回属性值。
+     *
      * @param xpath  元素定位xpath变道时
      * @param expect String ...
      * @return
