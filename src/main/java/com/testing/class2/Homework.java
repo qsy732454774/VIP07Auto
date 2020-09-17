@@ -15,20 +15,14 @@ public class Homework {
         web.halt("1");
         web.input("name","verify_code","1234");
         web.halt("1");
-        web.click("sbtbutton");
+        web.click("//a[@name='sbtbutton']");
         web.halt("5");
         web.assertTitleContains("我的账户-开源商城");
         web.halt("1");
-        web.click("home");
+        web.click("\"//a[text()='首页']\"");
         web.halt("1");
         //web.input("class","ecsc-search-input","vivo");
         //web.click("xpath","/html/body/div[4]/div/div[2]/div[2]/ul/li[1]");
-        web.click("/html/body/div[4]/div[2]/div[2]/a[1]/div[1]");
-        web.halt("1");
-        web.click("paybybill buy_button");
-        web.halt("1");
-        web.assertPageContains("购物车结算-开源商城");
-        web.halt("1");
-        web.closeBrowser();
+
     }
 }

@@ -1,9 +1,520 @@
-22:07:53  [TRACE] : This is trace
-22:07:53  [DEBUG] : This is debug.
-22:07:53  [INFO ] : This is an info.
-22:07:53  [INFO ] : ----------------------------测试开始---------------------
-22:07:53  [WARN ] : This is a warning.
-22:07:53  [ERROR] : java.lang.NumberFormatException: For input string: "ss"
-java.lang.NumberFormatException: For input string: "ss"
-	at com.testing.class5.TestLog4j.main(TestLog4j.java:25) [classes/:?]
-22:07:53  [FATAL] : This is a fatal error.
+23:29:20  [DEBUG] : CookieSpec selected: default
+23:29:20  [DEBUG] : Auth cache not set in the context
+23:29:20  [DEBUG] : Connection request: [route: {s}->https://sp0.baidu.com:443][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:20  [DEBUG] : Connection leased: [id: 0][route: {s}->https://sp0.baidu.com:443][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:20  [DEBUG] : Opening connection {s}->https://sp0.baidu.com:443
+23:29:20  [DEBUG] : Connecting to sp0.baidu.com/39.156.66.14:443
+23:29:20  [DEBUG] : Connecting socket to sp0.baidu.com/39.156.66.14:443 with timeout 10000
+23:29:20  [DEBUG] : Enabled protocols: [TLSv1]
+23:29:20  [DEBUG] : Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+23:29:20  [DEBUG] : Starting handshake
+23:29:20  [DEBUG] : Secure session established
+23:29:20  [DEBUG] :  negotiated protocol: TLSv1
+23:29:20  [DEBUG] :  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA
+23:29:20  [DEBUG] :  peer principal: CN=baidu.com, O="Beijing Baidu Netcom Science Technology Co., Ltd", OU=service operation department, L=beijing, ST=beijing, C=CN
+23:29:20  [DEBUG] :  peer alternative names: [baidu.com, baifubao.com, www.baidu.cn, www.baidu.com.cn, mct.y.nuomi.com, apollo.auto, dwz.cn, *.baidu.com, *.baifubao.com, *.baidustatic.com, *.bdstatic.com, *.bdimg.com, *.hao123.com, *.nuomi.com, *.chuanke.com, *.trustgo.com, *.bce.baidu.com, *.eyun.baidu.com, *.map.baidu.com, *.mbd.baidu.com, *.fanyi.baidu.com, *.baidubce.com, *.mipcdn.com, *.news.baidu.com, *.baidupcs.com, *.aipage.com, *.aipage.cn, *.bcehost.com, *.safe.baidu.com, *.im.baidu.com, *.baiducontent.com, *.dlnel.com, *.dlnel.org, *.dueros.baidu.com, *.su.baidu.com, *.91.com, *.hao123.baidu.com, *.apollo.auto, *.xueshu.baidu.com, *.bj.baidubce.com, *.gz.baidubce.com, *.smartapps.cn, *.bdtjrcv.com, *.hao222.com, *.haokan.com, *.pae.baidu.com, *.vd.bdstatic.com, click.hm.baidu.com, log.hm.baidu.com, cm.pos.baidu.com, wn.pos.baidu.com, update.pan.baidu.com]
+23:29:20  [DEBUG] :  issuer principal: CN=GlobalSign Organization Validation CA - SHA256 - G2, O=GlobalSign nv-sa, C=BE
+23:29:20  [DEBUG] : Connection established 192.168.1.4:62090<->39.156.66.14:443
+23:29:20  [DEBUG] : http-outgoing-0: set socket timeout to 15000
+23:29:20  [DEBUG] : Executing request GET /8aQDcjqpAAV3otqbppnN2DJv/api.php?query=3.3.3.3&co=&resource_id=5809&ie=utf8&oe=gbk HTTP/1.1
+23:29:20  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:20  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:20  [DEBUG] : http-outgoing-0 >> GET /8aQDcjqpAAV3otqbppnN2DJv/api.php?query=3.3.3.3&co=&resource_id=5809&ie=utf8&oe=gbk HTTP/1.1
+23:29:20  [DEBUG] : http-outgoing-0 >> Host: sp0.baidu.com
+23:29:20  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+23:29:20  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:20  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+23:29:20  [DEBUG] : http-outgoing-0 >> "GET /8aQDcjqpAAV3otqbppnN2DJv/api.php?query=3.3.3.3&co=&resource_id=5809&ie=utf8&oe=gbk HTTP/1.1[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 >> "Host: sp0.baidu.com[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "H"
+23:29:20  [DEBUG] : http-outgoing-0 << "TTP/1.1 200 OK[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Cache-Control: private[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Connection: Keep-Alive[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Content-Length: 1116[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Content-Type: application/json;charset=gbk[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Date: Thu, 17 Sep 2020 15:29:21 GMT[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Expires: Thu, 17 Sep 2020 15:29:21 GMT[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "P3p: CP=" OTI DSP COR IVA OUR IND COM "[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Server: Apache[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "Set-Cookie: BAIDUID=A3495D4FFBE87CFD9E984216C1B35C00:FG=1; expires=Fri, 17-Sep-21 15:29:21 GMT; max-age=31536000; path=/; domain=.baidu.com; version=1[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "X-Powered-By: HHVM[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+23:29:20  [DEBUG] : http-outgoing-0 << "{"ResultCode":"0","ResultNum":"1","Result":[{"DisplayData":{"strategy":{"tempName":"ip","precharge":"0","ctplOrPhp":"1"},"resultData":{"tplData":{"srcid":"5809","resourceid":"5809","OriginQuery":"3.3.3.3","origipquery":"3.3.3.3","query":"3.3.3.3","origip":"3.3.3.3","location":"\u7f8e\u56fd \u4e9a\u9a6c\u900a\u4e91","userip":"","showlamp":"1","tplt":"ip","titlecont":"IP\u5730\u5740\u67e5\u8be2","realurl":"http:\/\/www.ip138.com\/","showLikeShare":"1","shareImage":"1","data_source":"AE"},"extData":{"tplt":"ip","resourceid":"5809","OriginQuery":"3.3.3.3"}}},"ResultURL":"http:\/\/www.ip138.com\/","Weight":"2","Sort":"1","SrcID":"5809","ClickNeed":"0","SubResult":[],"SubResNum":"0","ar_passthrough":[],"RecoverCacheTime":"0"}],"QueryID":"68277452","Srcid":"5809","status":"0","data":[{"srcid":"5809","resourceid":"5809","OriginQuery":"3.3.3.3","origipquery":"3.3.3.3","query":"3.3.3.3","origip":"3.3.3.3","location":"\u7f8e\u56fd \u4e9a\u9a6c\u900a\u4e91","userip":"","showlamp":"1","tplt":"ip","titlecont":"IP\u5730\u5740\u67e5\u8be2","realurl":"http:\/\/www.ip138.com\/","showLikeShare":"1","shareImage":"1"}]}"
+23:29:20  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 OK
+23:29:20  [DEBUG] : http-outgoing-0 << Cache-Control: private
+23:29:20  [DEBUG] : http-outgoing-0 << Connection: Keep-Alive
+23:29:20  [DEBUG] : http-outgoing-0 << Content-Length: 1116
+23:29:20  [DEBUG] : http-outgoing-0 << Content-Type: application/json;charset=gbk
+23:29:20  [DEBUG] : http-outgoing-0 << Date: Thu, 17 Sep 2020 15:29:21 GMT
+23:29:20  [DEBUG] : http-outgoing-0 << Expires: Thu, 17 Sep 2020 15:29:21 GMT
+23:29:20  [DEBUG] : http-outgoing-0 << P3p: CP=" OTI DSP COR IVA OUR IND COM "
+23:29:20  [DEBUG] : http-outgoing-0 << Server: Apache
+23:29:20  [DEBUG] : http-outgoing-0 << Set-Cookie: BAIDUID=A3495D4FFBE87CFD9E984216C1B35C00:FG=1; expires=Fri, 17-Sep-21 15:29:21 GMT; max-age=31536000; path=/; domain=.baidu.com; version=1
+23:29:20  [DEBUG] : http-outgoing-0 << X-Powered-By: HHVM
+23:29:20  [DEBUG] : Connection can be kept alive indefinitely
+23:29:20  [DEBUG] : Cookie accepted [BAIDUID="A3495D4FFBE87CFD9E984216C1B35C00:FG=1", version:0, domain:baidu.com, path:/, expiry:Fri Sep 17 23:29:21 CST 2021]
+23:29:20  [DEBUG] : Connection [id: 0][route: {s}->https://sp0.baidu.com:443] can be kept alive indefinitely
+23:29:20  [DEBUG] : http-outgoing-0: set socket timeout to 0
+23:29:20  [DEBUG] : Connection released: [id: 0][route: {s}->https://sp0.baidu.com:443][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:20  [DEBUG] : Connection manager is shutting down
+23:29:20  [DEBUG] : http-outgoing-0: Close connection
+23:29:20  [DEBUG] : Connection manager shut down
+23:29:20  [DEBUG] : CookieSpec selected: default
+23:29:20  [DEBUG] : Auth cache not set in the context
+23:29:20  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:20  [DEBUG] : Connection leased: [id: 1][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:20  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:29:21  [DEBUG] : Connection established 192.168.1.4:62091<->47.105.110.138:8000
+23:29:21  [DEBUG] : http-outgoing-1: set socket timeout to 15000
+23:29:21  [DEBUG] : Executing request POST /index.php?m=Home&c=User&a=do_login&t=0.28132331799582766 HTTP/1.1
+23:29:21  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:21  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:21  [DEBUG] : http-outgoing-1 >> POST /index.php?m=Home&c=User&a=do_login&t=0.28132331799582766 HTTP/1.1
+23:29:21  [DEBUG] : http-outgoing-1 >> Content-Length: 50
+23:29:21  [DEBUG] : http-outgoing-1 >> Content-Type: application/x-www-form-urlencoded
+23:29:21  [DEBUG] : http-outgoing-1 >> Content-Encoding: UTF-8
+23:29:21  [DEBUG] : http-outgoing-1 >> Host: www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : http-outgoing-1 >> Connection: Keep-Alive
+23:29:21  [DEBUG] : http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:21  [DEBUG] : http-outgoing-1 >> Accept-Encoding: gzip,deflate
+23:29:21  [DEBUG] : http-outgoing-1 >> "POST /index.php?m=Home&c=User&a=do_login&t=0.28132331799582766 HTTP/1.1[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "Content-Length: 50[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "Content-Encoding: UTF-8[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 >> "username=13800138006&password=123456&verify_code=1"
+23:29:21  [DEBUG] : http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Server: nginx/1.14.1[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Date: Thu, 17 Sep 2020 15:29:21 GMT[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Content-Type: text/html; charset=UTF-8[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "X-Powered-By: PHP/7.0.33[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Set-Cookie: is_mobile=0; expires=Thu, 17-Sep-2020 16:29:21 GMT; Max-Age=3600; path=/[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Set-Cookie: PHPSESSID=v5cd2ghjf032ao1crtn53c0hj2; path=/[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Expires: Thu, 19 Nov 1981 08:52:00 GMT[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Cache-Control: no-store, no-cache, must-revalidate[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Pragma: no-cache[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Set-Cookie: user_id=8; path=/[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Set-Cookie: is_distribut=0; path=/[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Set-Cookie: uname=admin; path=/[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "Set-Cookie: cn=0; expires=Thu, 17-Sep-2020 14:29:21 GMT; Max-Age=0; path=/[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "392[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "{"status":1,"msg":"\u767b\u9646\u6210\u529f","result":{"user_id":8,"email":"18217194239@163.com","password":"519475228fe35ad067744465c42a19b2","paypwd":"519475228fe35ad067744465c42a19b2","sex":1,"birthday":645289200,"user_money":"0.00","frozen_money":"0.00","distribut_money":"0.00","underling_number":0,"pay_points":540,"address_id":0,"reg_time":1523857661,"last_login":0,"last_ip":"","qq":"","mobile":"13800138006","mobile_validated":1,"oauth":"","openid":null,"unionid":null,"head_pic":"\/public\/upload\/user\/8\/head_pic\/\/0a2d0c241cd408f0ea5b3c8c8a39e0fa.png","province":0,"city":0,"district":0,"email_validated":1,"nickname":"admin","level":2,"discount":"1.00","total_amount":"0.00","is_lock":0,"is_distribut":0,"first_leader":3,"second_leader":0,"third_leader":0,"token":"","message_mask":63,"push_id":"190e35f7e"
+23:29:21  [DEBUG] : http-outgoing-1 << HTTP/1.1 200 OK
+23:29:21  [DEBUG] : http-outgoing-1 << Server: nginx/1.14.1
+23:29:21  [DEBUG] : http-outgoing-1 << Date: Thu, 17 Sep 2020 15:29:21 GMT
+23:29:21  [DEBUG] : http-outgoing-1 << Content-Type: text/html; charset=UTF-8
+23:29:21  [DEBUG] : http-outgoing-1 << Transfer-Encoding: chunked
+23:29:21  [DEBUG] : http-outgoing-1 << Connection: keep-alive
+23:29:21  [DEBUG] : http-outgoing-1 << X-Powered-By: PHP/7.0.33
+23:29:21  [DEBUG] : http-outgoing-1 << Set-Cookie: is_mobile=0; expires=Thu, 17-Sep-2020 16:29:21 GMT; Max-Age=3600; path=/
+23:29:21  [DEBUG] : http-outgoing-1 << Set-Cookie: PHPSESSID=v5cd2ghjf032ao1crtn53c0hj2; path=/
+23:29:21  [DEBUG] : http-outgoing-1 << Expires: Thu, 19 Nov 1981 08:52:00 GMT
+23:29:21  [DEBUG] : http-outgoing-1 << Cache-Control: no-store, no-cache, must-revalidate
+23:29:21  [DEBUG] : http-outgoing-1 << Pragma: no-cache
+23:29:21  [DEBUG] : http-outgoing-1 << Set-Cookie: user_id=8; path=/
+23:29:21  [DEBUG] : http-outgoing-1 << Set-Cookie: is_distribut=0; path=/
+23:29:21  [DEBUG] : http-outgoing-1 << Set-Cookie: uname=admin; path=/
+23:29:21  [DEBUG] : http-outgoing-1 << Set-Cookie: cn=0; expires=Thu, 17-Sep-2020 14:29:21 GMT; Max-Age=0; path=/
+23:29:21  [DEBUG] : Connection can be kept alive indefinitely
+23:29:21  [DEBUG] : Cookie accepted [is_mobile="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:Fri Sep 18 00:29:21 CST 2020]
+23:29:21  [DEBUG] : Cookie accepted [PHPSESSID="v5cd2ghjf032ao1crtn53c0hj2", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:29:21  [DEBUG] : Cookie accepted [user_id="8", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:29:21  [DEBUG] : Cookie accepted [is_distribut="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:29:21  [DEBUG] : Cookie accepted [uname="admin", version:0, domain:www.testingedu.com.cn, path:/, expiry:null]
+23:29:21  [DEBUG] : Cookie accepted [cn="0", version:0, domain:www.testingedu.com.cn, path:/, expiry:Thu Sep 17 22:29:21 CST 2020]
+23:29:21  [DEBUG] : http-outgoing-1 << "07c8658ec6","distribut_level":0,"is_vip":0,"level_name":"\u5014\u5f3a\u9752\u94dc"},"url":""}[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "0[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+23:29:21  [DEBUG] : Connection [id: 1][route: {}->http://www.testingedu.com.cn:8000] can be kept alive indefinitely
+23:29:21  [DEBUG] : http-outgoing-1: set socket timeout to 0
+23:29:21  [DEBUG] : Connection released: [id: 1][route: {}->http://www.testingedu.com.cn:8000][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:21  [DEBUG] : Connection manager is shutting down
+23:29:21  [DEBUG] : http-outgoing-1: Close connection
+23:29:21  [DEBUG] : Connection manager shut down
+23:29:21  [DEBUG] : CookieSpec selected: default
+23:29:21  [DEBUG] : Auth cache not set in the context
+23:29:21  [DEBUG] : Connection request: [route: {s}->https://b.zhulogic.com:443][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [DEBUG] : Connection leased: [id: 2][route: {s}->https://b.zhulogic.com:443][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:21  [DEBUG] : Opening connection {s}->https://b.zhulogic.com:443
+23:29:21  [DEBUG] : Connecting to b.zhulogic.com/101.37.252.208:443
+23:29:21  [DEBUG] : Connecting socket to b.zhulogic.com/101.37.252.208:443 with timeout 10000
+23:29:21  [DEBUG] : Enabled protocols: [TLSv1]
+23:29:21  [DEBUG] : Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+23:29:21  [DEBUG] : Starting handshake
+23:29:21  [DEBUG] : Secure session established
+23:29:21  [DEBUG] :  negotiated protocol: TLSv1
+23:29:21  [DEBUG] :  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+23:29:21  [DEBUG] :  peer principal: CN=*.zhulogic.com
+23:29:21  [DEBUG] :  peer alternative names: [*.zhulogic.com]
+23:29:21  [DEBUG] :  issuer principal: CN=Let's Encrypt Authority X3, O=Let's Encrypt, C=US
+23:29:21  [DEBUG] : Connection established 192.168.1.4:62092<->101.37.252.208:443
+23:29:21  [DEBUG] : http-outgoing-2: set socket timeout to 15000
+23:29:21  [DEBUG] : Executing request POST /designer_api/account/login_quick_pc HTTP/1.1
+23:29:21  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:21  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:21  [DEBUG] : http-outgoing-2 >> POST /designer_api/account/login_quick_pc HTTP/1.1
+23:29:21  [DEBUG] : http-outgoing-2 >> Content-Length: 108
+23:29:21  [DEBUG] : http-outgoing-2 >> Content-Type: application/json
+23:29:21  [DEBUG] : http-outgoing-2 >> Content-Encoding: UTF-8
+23:29:21  [DEBUG] : http-outgoing-2 >> Host: b.zhulogic.com
+23:29:21  [DEBUG] : http-outgoing-2 >> Connection: Keep-Alive
+23:29:21  [DEBUG] : http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:21  [DEBUG] : http-outgoing-2 >> Accept-Encoding: gzip,deflate
+23:29:21  [DEBUG] : http-outgoing-2 >> "POST /designer_api/account/login_quick_pc HTTP/1.1[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "Content-Length: 108[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "Content-Type: application/json[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "Content-Encoding: UTF-8[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "Host: b.zhulogic.com[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 >> "{"phone":"13412341234","code":"123","messageType":3,"registration_type":1,"channel":"zhulogic","unionid":""}"
+23:29:21  [DEBUG] : http-outgoing-2 << "HTTP/1.1 200 OK[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Server: nginx/1.6.3[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Date: Thu, 17 Sep 2020 15:29:21 GMT[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Transfer-Encoding: chunked[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Connection: keep-alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Content-Encoding: gzip[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "X-Application-Context: designer-api:pro:8088[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Access-Control-Allow-Credentials: true[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Access-Control-Allow-Headers: Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With,dark[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "Access-Control-Max-Age: 3600[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "56[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xaa]V*.I,)-[0x8e]O[0xce]OIU[0xb2]2400[0xd4]Q[0xca]M-.NL[0x7]r[0x95]^[0xae][0xea]y[0xb1][0xbe][0xf1][0xf9][0x82][0xc6][0x97]Sf[0xbe]X[0xbf]^IG)%[0xb1]$Q[0xc9]*[0xaf]4'[0xa7][0x16][0x0][0x0][0x0][0xff][0xff][0x3][0x0][0xa1][0x8c].[0xfb]<[0x0][0x0][0x0][\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "0[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-2 << HTTP/1.1 200 OK
+23:29:21  [DEBUG] : http-outgoing-2 << Server: nginx/1.6.3
+23:29:21  [DEBUG] : http-outgoing-2 << Date: Thu, 17 Sep 2020 15:29:21 GMT
+23:29:21  [DEBUG] : http-outgoing-2 << Content-Type: application/json;charset=UTF-8
+23:29:21  [DEBUG] : http-outgoing-2 << Transfer-Encoding: chunked
+23:29:21  [DEBUG] : http-outgoing-2 << Connection: keep-alive
+23:29:21  [DEBUG] : http-outgoing-2 << Content-Encoding: gzip
+23:29:21  [DEBUG] : http-outgoing-2 << X-Application-Context: designer-api:pro:8088
+23:29:21  [DEBUG] : http-outgoing-2 << Access-Control-Allow-Credentials: true
+23:29:21  [DEBUG] : http-outgoing-2 << Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+23:29:21  [DEBUG] : http-outgoing-2 << Access-Control-Allow-Headers: Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With,dark
+23:29:21  [DEBUG] : http-outgoing-2 << Access-Control-Max-Age: 3600
+23:29:21  [DEBUG] : Connection can be kept alive indefinitely
+23:29:21  [DEBUG] : Connection [id: 2][route: {s}->https://b.zhulogic.com:443] can be kept alive indefinitely
+23:29:21  [DEBUG] : http-outgoing-2: set socket timeout to 0
+23:29:21  [DEBUG] : Connection released: [id: 2][route: {s}->https://b.zhulogic.com:443][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:21  [DEBUG] : Connection manager is shutting down
+23:29:21  [DEBUG] : http-outgoing-2: Close connection
+23:29:21  [DEBUG] : Connection manager shut down
+23:29:21  [DEBUG] : CookieSpec selected: default
+23:29:21  [DEBUG] : Auth cache not set in the context
+23:29:21  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [DEBUG] : Connection leased: [id: 3][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:21  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:29:21  [DEBUG] : Connection established 192.168.1.4:62093<->47.105.110.138:8000
+23:29:21  [DEBUG] : http-outgoing-3: set socket timeout to 15000
+23:29:21  [DEBUG] : Executing request POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:21  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:21  [DEBUG] : http-outgoing-3 >> POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : http-outgoing-3 >> Content-Length: 240
+23:29:21  [DEBUG] : http-outgoing-3 >> Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI
+23:29:21  [DEBUG] : http-outgoing-3 >> Host: www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : http-outgoing-3 >> Connection: Keep-Alive
+23:29:21  [DEBUG] : http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:21  [DEBUG] : http-outgoing-3 >> Accept-Encoding: gzip,deflate
+23:29:21  [DEBUG] : http-outgoing-3: Close connection
+23:29:21  [DEBUG] : http-outgoing-3 >> "POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Content-Length: 240[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "--Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Content-Disposition: form-data; name="file"; filename="[0xe5][0xbe][0xae][0xe4][0xbf][0xa1][0xe4][0xba][0x8c][0xe7][0xbb][0xb4][0xe7][0xa0][0x81].png"[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Content-Type: application/octet-stream[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "Content-Transfer-Encoding: binary[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-3: Shutdown connection
+23:29:21  [DEBUG] : Connection discarded
+23:29:21  [DEBUG] : Connection released: [id: 3][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [INFO ] : I/O exception (java.io.FileNotFoundException) caught when processing request to {}->http://www.testingedu.com.cn:8000: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+23:29:21  [DEBUG] : E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+java.io.FileNotFoundException: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_221]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_221]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_221]
+	at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:113) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.DefaultBHttpClientConnection.sendRequestEntity(DefaultBHttpClientConnection.java:156) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.conn.CPoolProxy.sendRequestEntity(CPoolProxy.java:152) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:238) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) [httpclient-4.5.11.jar:4.5.11]
+	at com.testing.inter.HttpClientKw.doPost(HttpClientKw.java:339) [classes/:?]
+	at com.testing.class12.KwTest.main(KwTest.java:14) [classes/:?]
+23:29:21  [INFO ] : Retrying request to {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : CookieSpec selected: default
+23:29:21  [DEBUG] : Auth cache not set in the context
+23:29:21  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [DEBUG] : Connection leased: [id: 4][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:21  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:29:21  [DEBUG] : Connection established 192.168.1.4:62094<->47.105.110.138:8000
+23:29:21  [DEBUG] : http-outgoing-4: set socket timeout to 15000
+23:29:21  [DEBUG] : Executing request POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:21  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:21  [DEBUG] : http-outgoing-4 >> POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : http-outgoing-4 >> Content-Length: 240
+23:29:21  [DEBUG] : http-outgoing-4 >> Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI
+23:29:21  [DEBUG] : http-outgoing-4 >> Host: www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : http-outgoing-4 >> Connection: Keep-Alive
+23:29:21  [DEBUG] : http-outgoing-4 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:21  [DEBUG] : http-outgoing-4 >> Accept-Encoding: gzip,deflate
+23:29:21  [DEBUG] : http-outgoing-4: Close connection
+23:29:21  [DEBUG] : http-outgoing-4 >> "POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Content-Length: 240[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Connection: Keep-Alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "--Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Content-Disposition: form-data; name="file"; filename="[0xe5][0xbe][0xae][0xe4][0xbf][0xa1][0xe4][0xba][0x8c][0xe7][0xbb][0xb4][0xe7][0xa0][0x81].png"[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Content-Type: application/octet-stream[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "Content-Transfer-Encoding: binary[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-4: Shutdown connection
+23:29:21  [DEBUG] : Connection discarded
+23:29:21  [DEBUG] : Connection released: [id: 4][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [INFO ] : I/O exception (java.io.FileNotFoundException) caught when processing request to {}->http://www.testingedu.com.cn:8000: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+23:29:21  [DEBUG] : E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+java.io.FileNotFoundException: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_221]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_221]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_221]
+	at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:113) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.DefaultBHttpClientConnection.sendRequestEntity(DefaultBHttpClientConnection.java:156) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.conn.CPoolProxy.sendRequestEntity(CPoolProxy.java:152) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:238) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) [httpclient-4.5.11.jar:4.5.11]
+	at com.testing.inter.HttpClientKw.doPost(HttpClientKw.java:339) [classes/:?]
+	at com.testing.class12.KwTest.main(KwTest.java:14) [classes/:?]
+23:29:21  [INFO ] : Retrying request to {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : CookieSpec selected: default
+23:29:21  [DEBUG] : Auth cache not set in the context
+23:29:21  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [DEBUG] : Connection leased: [id: 5][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:21  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:29:21  [DEBUG] : Connection established 192.168.1.4:62095<->47.105.110.138:8000
+23:29:21  [DEBUG] : http-outgoing-5: set socket timeout to 15000
+23:29:21  [DEBUG] : Executing request POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:21  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:21  [DEBUG] : http-outgoing-5 >> POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : http-outgoing-5 >> Content-Length: 240
+23:29:21  [DEBUG] : http-outgoing-5 >> Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI
+23:29:21  [DEBUG] : http-outgoing-5 >> Host: www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : http-outgoing-5 >> Connection: Keep-Alive
+23:29:21  [DEBUG] : http-outgoing-5 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:21  [DEBUG] : http-outgoing-5 >> Accept-Encoding: gzip,deflate
+23:29:21  [DEBUG] : http-outgoing-5: Close connection
+23:29:21  [DEBUG] : http-outgoing-5 >> "POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Content-Length: 240[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Connection: Keep-Alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "--Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Content-Disposition: form-data; name="file"; filename="[0xe5][0xbe][0xae][0xe4][0xbf][0xa1][0xe4][0xba][0x8c][0xe7][0xbb][0xb4][0xe7][0xa0][0x81].png"[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Content-Type: application/octet-stream[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "Content-Transfer-Encoding: binary[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-5: Shutdown connection
+23:29:21  [DEBUG] : Connection discarded
+23:29:21  [DEBUG] : Connection released: [id: 5][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [INFO ] : I/O exception (java.io.FileNotFoundException) caught when processing request to {}->http://www.testingedu.com.cn:8000: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+23:29:21  [DEBUG] : E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+java.io.FileNotFoundException: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_221]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_221]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_221]
+	at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:113) ~[httpmime-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.DefaultBHttpClientConnection.sendRequestEntity(DefaultBHttpClientConnection.java:156) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.conn.CPoolProxy.sendRequestEntity(CPoolProxy.java:152) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:238) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123) ~[httpcore-4.4.13.jar:4.4.13]
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:272) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186) ~[httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83) [httpclient-4.5.11.jar:4.5.11]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108) [httpclient-4.5.11.jar:4.5.11]
+	at com.testing.inter.HttpClientKw.doPost(HttpClientKw.java:339) [classes/:?]
+	at com.testing.class12.KwTest.main(KwTest.java:14) [classes/:?]
+23:29:21  [INFO ] : Retrying request to {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : CookieSpec selected: default
+23:29:21  [DEBUG] : Auth cache not set in the context
+23:29:21  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [DEBUG] : Connection leased: [id: 6][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:21  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8000
+23:29:21  [DEBUG] : Connection established 192.168.1.4:62096<->47.105.110.138:8000
+23:29:21  [DEBUG] : http-outgoing-6: set socket timeout to 15000
+23:29:21  [DEBUG] : Executing request POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:21  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:21  [DEBUG] : http-outgoing-6 >> POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1
+23:29:21  [DEBUG] : http-outgoing-6 >> Content-Length: 240
+23:29:21  [DEBUG] : http-outgoing-6 >> Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI
+23:29:21  [DEBUG] : http-outgoing-6 >> Host: www.testingedu.com.cn:8000
+23:29:21  [DEBUG] : http-outgoing-6 >> Connection: Keep-Alive
+23:29:21  [DEBUG] : http-outgoing-6 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:21  [DEBUG] : http-outgoing-6 >> Accept-Encoding: gzip,deflate
+23:29:21  [DEBUG] : http-outgoing-6: Close connection
+23:29:21  [DEBUG] : http-outgoing-6 >> "POST /index.php/home/Uploadify/imageUp/savepath/head_pic/pictitle/banner/dir/images.html HTTP/1.1[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Content-Length: 240[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Content-Type: multipart/form-data; boundary=Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Host: www.testingedu.com.cn:8000[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Connection: Keep-Alive[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "--Qdfmcx5fqzvJcsu2kFfM6gnwAEsnG_UQEI9NI[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Content-Disposition: form-data; name="file"; filename="[0xe5][0xbe][0xae][0xe4][0xbf][0xa1][0xe4][0xba][0x8c][0xe7][0xbb][0xb4][0xe7][0xa0][0x81].png"[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Content-Type: application/octet-stream[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "Content-Transfer-Encoding: binary[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6 >> "[\r][\n]"
+23:29:21  [DEBUG] : http-outgoing-6: Shutdown connection
+23:29:21  [DEBUG] : Connection discarded
+23:29:21  [DEBUG] : Connection released: [id: 6][route: {}->http://www.testingedu.com.cn:8000][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:21  [ERROR] : java.io.FileNotFoundException: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+java.io.FileNotFoundException: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+	at com.testing.inter.HttpClientKw.doPost(HttpClientKw.java:355) [classes/:?]
+	at com.testing.class12.KwTest.main(KwTest.java:14) [classes/:?]
+23:29:21  [DEBUG] : Connection manager is shutting down
+23:29:21  [DEBUG] : Connection manager shut down
+23:29:21  [INFO ] : ip接口结果是：{"ResultCode":"0","ResultNum":"1","Result":[{"DisplayData":{"strategy":{"tempName":"ip","precharge":"0","ctplOrPhp":"1"},"resultData":{"tplData":{"srcid":"5809","resourceid":"5809","OriginQuery":"3.3.3.3","origipquery":"3.3.3.3","query":"3.3.3.3","origip":"3.3.3.3","location":"美国 亚马逊云","userip":"","showlamp":"1","tplt":"ip","titlecont":"IP地址查询","realurl":"http:\/\/www.ip138.com\/","showLikeShare":"1","shareImage":"1","data_source":"AE"},"extData":{"tplt":"ip","resourceid":"5809","OriginQuery":"3.3.3.3"}}},"ResultURL":"http:\/\/www.ip138.com\/","Weight":"2","Sort":"1","SrcID":"5809","ClickNeed":"0","SubResult":[],"SubResNum":"0","ar_passthrough":[],"RecoverCacheTime":"0"}],"QueryID":"68277452","Srcid":"5809","status":"0","data":[{"srcid":"5809","resourceid":"5809","OriginQuery":"3.3.3.3","origipquery":"3.3.3.3","query":"3.3.3.3","origip":"3.3.3.3","location":"美国 亚马逊云","userip":"","showlamp":"1","tplt":"ip","titlecont":"IP地址查询","realurl":"http:\/\/www.ip138.com\/","showLikeShare":"1","shareImage":"1"}]}
+23:29:21  [INFO ] : resultcode的结果是0
+23:29:21  [INFO ] : data中的location的结果是美国 亚马逊云
+23:29:21  [INFO ] : result中的location的结果是美国 亚马逊云
+23:29:21  [INFO ] : 商城登录接口结果是：{"status":1,"msg":"登陆成功","result":{"user_id":8,"email":"18217194239@163.com","password":"519475228fe35ad067744465c42a19b2","paypwd":"519475228fe35ad067744465c42a19b2","sex":1,"birthday":645289200,"user_money":"0.00","frozen_money":"0.00","distribut_money":"0.00","underling_number":0,"pay_points":540,"address_id":0,"reg_time":1523857661,"last_login":0,"last_ip":"","qq":"","mobile":"13800138006","mobile_validated":1,"oauth":"","openid":null,"unionid":null,"head_pic":"\/public\/upload\/user\/8\/head_pic\/\/0a2d0c241cd408f0ea5b3c8c8a39e0fa.png","province":0,"city":0,"district":0,"email_validated":1,"nickname":"admin","level":2,"discount":"1.00","total_amount":"0.00","is_lock":0,"is_distribut":0,"first_leader":3,"second_leader":0,"third_leader":0,"token":"","message_mask":63,"push_id":"190e35f7e07c8658ec6","distribut_level":0,"is_vip":0,"level_name":"倔强青铜"},"url":""}
+23:29:21  [INFO ] : 登录的msg是登陆成功
+23:29:21  [INFO ] : json登录接口结果是：{"status_code":1001,"message":"验证码错误","data":null}
+23:29:21  [INFO ] : json的message是：验证码错误
+23:29:21  [INFO ] : 上传接口的结果是：java.io.FileNotFoundException: E:\QSwork\素材\微信二维码.png (系统找不到指定的路径。)
+23:29:30  [DEBUG] : CookieSpec selected: default
+23:29:30  [DEBUG] : Auth cache not set in the context
+23:29:30  [DEBUG] : Connection request: [route: {s}->https://b.zhulogic.com:443][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:29:30  [DEBUG] : Connection leased: [id: 0][route: {s}->https://b.zhulogic.com:443][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:30  [DEBUG] : Opening connection {s}->https://b.zhulogic.com:443
+23:29:30  [DEBUG] : Connecting to b.zhulogic.com/101.37.252.208:443
+23:29:30  [DEBUG] : Connecting socket to b.zhulogic.com/101.37.252.208:443 with timeout 0
+23:29:30  [DEBUG] : Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+23:29:30  [DEBUG] : Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+23:29:30  [DEBUG] : Starting handshake
+23:29:30  [DEBUG] : Secure session established
+23:29:30  [DEBUG] :  negotiated protocol: TLSv1.2
+23:29:30  [DEBUG] :  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+23:29:30  [DEBUG] :  peer principal: CN=*.zhulogic.com
+23:29:30  [DEBUG] :  peer alternative names: [*.zhulogic.com]
+23:29:30  [DEBUG] :  issuer principal: CN=Let's Encrypt Authority X3, O=Let's Encrypt, C=US
+23:29:30  [DEBUG] : Connection established 192.168.1.4:62103<->101.37.252.208:443
+23:29:30  [DEBUG] : Executing request POST /designer_api/account/login_quick_pc HTTP/1.1
+23:29:30  [DEBUG] : Target auth state: UNCHALLENGED
+23:29:30  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:29:30  [DEBUG] : http-outgoing-0 >> POST /designer_api/account/login_quick_pc HTTP/1.1
+23:29:30  [DEBUG] : http-outgoing-0 >> Content-Type: application/json;charset=UTF-8
+23:29:30  [DEBUG] : http-outgoing-0 >> Content-Length: 108
+23:29:30  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+23:29:30  [DEBUG] : http-outgoing-0 >> Host: b.zhulogic.com
+23:29:30  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+23:29:30  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:29:30  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+23:29:30  [DEBUG] : http-outgoing-0 >> "POST /designer_api/account/login_quick_pc HTTP/1.1[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "Content-Type: application/json;charset=UTF-8[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "Content-Length: 108[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "Host: b.zhulogic.com[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 >> "{"phone":"13412341234","code":"123","messageType":3,"registration_type":1,"channel":"zhulogic","unionid":""}"
+23:29:30  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Server: nginx/1.6.3[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Date: Thu, 17 Sep 2020 15:29:31 GMT[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Content-Encoding: gzip[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "X-Application-Context: designer-api:pro:8088[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Access-Control-Allow-Credentials: true[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Access-Control-Allow-Headers: Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With,dark[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "Access-Control-Max-Age: 3600[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "56[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0xaa]V*.I,)-[0x8e]O[0xce]OIU[0xb2]2400[0xd4]Q[0xca]M-.NL[0x7]r[0x95]^[0xae][0xea]y[0xb1][0xbe][0xf1][0xf9][0x82][0xc6][0x97]Sf[0xbe]X[0xbf]^IG)%[0xb1]$Q[0xc9]*[0xaf]4'[0xa7][0x16][0x0][0x0][0x0][0xff][0xff][0x3][0x0][0xa1][0x8c].[0xfb]<[0x0][0x0][0x0][\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "0[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+23:29:30  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 OK
+23:29:30  [DEBUG] : http-outgoing-0 << Server: nginx/1.6.3
+23:29:30  [DEBUG] : http-outgoing-0 << Date: Thu, 17 Sep 2020 15:29:31 GMT
+23:29:30  [DEBUG] : http-outgoing-0 << Content-Type: application/json;charset=UTF-8
+23:29:30  [DEBUG] : http-outgoing-0 << Transfer-Encoding: chunked
+23:29:30  [DEBUG] : http-outgoing-0 << Connection: keep-alive
+23:29:30  [DEBUG] : http-outgoing-0 << Content-Encoding: gzip
+23:29:30  [DEBUG] : http-outgoing-0 << X-Application-Context: designer-api:pro:8088
+23:29:30  [DEBUG] : http-outgoing-0 << Access-Control-Allow-Credentials: true
+23:29:30  [DEBUG] : http-outgoing-0 << Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+23:29:30  [DEBUG] : http-outgoing-0 << Access-Control-Allow-Headers: Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Requested-With,dark
+23:29:30  [DEBUG] : http-outgoing-0 << Access-Control-Max-Age: 3600
+23:29:30  [DEBUG] : Connection can be kept alive indefinitely
+23:29:30  [DEBUG] : Connection [id: 0][route: {s}->https://b.zhulogic.com:443] can be kept alive indefinitely
+23:29:30  [DEBUG] : http-outgoing-0: set socket timeout to 0
+23:29:30  [DEBUG] : Connection released: [id: 0][route: {s}->https://b.zhulogic.com:443][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:29:30  [INFO ] : {"status_code":1001,"message":"验证码错误","data":null}
+23:29:30  [INFO ] : 测试成功

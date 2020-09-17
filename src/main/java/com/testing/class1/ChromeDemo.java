@@ -1,11 +1,10 @@
 package com.testing.class1;
 
-import com.testing.driver.GoogleDriver;
+import com.testing.webDriver.GoogleDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ChromeDemo {
     public static void main(String[] args) {

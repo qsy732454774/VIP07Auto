@@ -1,5 +1,0 @@
-15:08:49  [INFO ] : 点击//a[text()='返回商城首页']元素
-15:08:51  [INFO ] : 点击//button[@type='submit']元素
-15:08:52  [INFO ] : 点击//div[@class='shop-list-splb p']/ul/li[1]//div[@class='xs_img']/a元素
-15:08:52  [INFO ] : 点击//*[@id='join_cart']元素
-15:08:54  [INFO ] : 点击//a[text()='去购物车结算']元素
