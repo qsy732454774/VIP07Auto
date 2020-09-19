@@ -1,6 +1,0 @@
-23:06:14  [INFO ] : 访问网页http://www.testingedu.com.cn:8000/Admin/Admin/login
-23:06:15  [INFO ] : 点击//input[@name='submit']元素
-23:06:15  [INFO ] : 点击//a[text()='商城']元素
-23:06:15  [INFO ] : 点击//div[@title='添加商品']元素
-23:06:18  [INFO ] : 点击//*[@id='is_free_shipping_label_1']元素
-23:06:18  [INFO ] : 点击//a[@id='submit']元素

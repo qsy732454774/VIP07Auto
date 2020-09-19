@@ -7,13 +7,17 @@ public class InterKeyWord {
     //声明成员变量 返回的内容
     public String responseResult;
 
+    public HttpClientKw key;
+
+    public InterKeyWord(){
+        key=new HttpClientKw();
+    }
+
     public void doGet(String url,String param){
-        HttpClientKw key =new HttpClientKw();
         responseResult=key.doGet(url,param);
     }
 
     public void doPost(String url,String param,String type){
-        HttpClientKw key =new HttpClientKw();
         responseResult=key.doPost(url,param,type);
     }
 
@@ -32,7 +36,17 @@ public class InterKeyWord {
         else{
             AutoLogger.log.error("解析出的结果是空");
         }
-
     }
 
+    public void useCookie(){
+        key.useCookie();
+    }
+
+    public void notUseCookie(){
+        key.notUseCookie();
+    }
+
+    public void clearCookie(){
+        key.clearCookie();
+    }
 }

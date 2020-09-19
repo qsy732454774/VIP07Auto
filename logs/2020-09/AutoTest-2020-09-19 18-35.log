@@ -1,0 +1,63 @@
+18:35:43  [DEBUG] : CookieSpec selected: default
+18:35:43  [DEBUG] : Auth cache not set in the context
+18:35:43  [DEBUG] : Connection request: [route: {}->http://oms-dev.xk12.cn:80][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+18:35:43  [DEBUG] : Connection leased: [id: 0][route: {}->http://oms-dev.xk12.cn:80][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+18:35:43  [DEBUG] : Opening connection {}->http://oms-dev.xk12.cn:80
+18:35:43  [DEBUG] : Connecting to oms-dev.xk12.cn/112.253.13.210:80
+18:35:43  [DEBUG] : Connection established 192.168.1.4:57134<->112.253.13.210:80
+18:35:43  [DEBUG] : http-outgoing-0: set socket timeout to 15000
+18:35:43  [DEBUG] : Executing request POST /login HTTP/1.1
+18:35:43  [DEBUG] : Target auth state: UNCHALLENGED
+18:35:43  [DEBUG] : Proxy auth state: UNCHALLENGED
+18:35:43  [DEBUG] : http-outgoing-0 >> POST /login HTTP/1.1
+18:35:43  [DEBUG] : http-outgoing-0 >> Content-Length: 0
+18:35:43  [DEBUG] : http-outgoing-0 >> Host: oms-dev.xk12.cn
+18:35:43  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+18:35:43  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+18:35:43  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+18:35:43  [DEBUG] : http-outgoing-0 >> "POST /login HTTP/1.1[\r][\n]"
+18:35:43  [DEBUG] : http-outgoing-0 >> "Content-Length: 0[\r][\n]"
+18:35:43  [DEBUG] : http-outgoing-0 >> "Host: oms-dev.xk12.cn[\r][\n]"
+18:35:43  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+18:35:43  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+18:35:43  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+18:35:43  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Server: openresty[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Date: Sat, 19 Sep 2020 10:35:44 GMT[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Vary: Accept-Encoding[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "X-Powered-By: PHP/7.2.9[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Cache-Control: no-cache[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Set-Cookie: okay_session=eyJpdiI6IlwvMWpBdmdONlJqS2VQTnRlSjZXVXZ3PT0iLCJ2YWx1ZSI6Ik03MmVGdWlncEczUzFtRHhQTDVJMGIyZXlYSTQwSG40UURrR1hZVjZoNWNUV0ZQaFpFTTFyOFptWGJSQm12RWgiLCJtYWMiOiI1ODJkZjIwOGU2NjRkMjZiNDRhOGQ5ZWI2ZDMwNmI4Y2Q3YjU0NTljYzM1MDNlNjc5NGNkNTM2MTE5ZDE1ZTUyIn0%3D; expires=Sat, 19-Sep-2020 12:35:44 GMT; Max-Age=7200; path=/; httponly[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Content-Encoding: gzip[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "Expires: Sat, 19 Sep 2020 10:35:43 GMT[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "51[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xaa]VJ[0xce]OIU[0xb2]2[0xd4]Q[0xca]-NW[0xb2]R[0x8a])551H[0x89])5[0xb7]L3P[0x88])5I[0x5]q,[0xc][0xd2]R@l[0xe3]D[0xa0]D[0xa2]9[0x90]4600R[0xaa][0x5][0x0][0x0][0x0][0xff][0xff][0x3][0x0]V[0xe7]([0x9e]>[0x0][0x0][0x0][\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "0[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+18:35:44  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 OK
+18:35:44  [DEBUG] : http-outgoing-0 << Server: openresty
+18:35:44  [DEBUG] : http-outgoing-0 << Date: Sat, 19 Sep 2020 10:35:44 GMT
+18:35:44  [DEBUG] : http-outgoing-0 << Content-Type: application/json
+18:35:44  [DEBUG] : http-outgoing-0 << Transfer-Encoding: chunked
+18:35:44  [DEBUG] : http-outgoing-0 << Connection: keep-alive
+18:35:44  [DEBUG] : http-outgoing-0 << Vary: Accept-Encoding
+18:35:44  [DEBUG] : http-outgoing-0 << X-Powered-By: PHP/7.2.9
+18:35:44  [DEBUG] : http-outgoing-0 << Cache-Control: no-cache
+18:35:44  [DEBUG] : http-outgoing-0 << Set-Cookie: okay_session=eyJpdiI6IlwvMWpBdmdONlJqS2VQTnRlSjZXVXZ3PT0iLCJ2YWx1ZSI6Ik03MmVGdWlncEczUzFtRHhQTDVJMGIyZXlYSTQwSG40UURrR1hZVjZoNWNUV0ZQaFpFTTFyOFptWGJSQm12RWgiLCJtYWMiOiI1ODJkZjIwOGU2NjRkMjZiNDRhOGQ5ZWI2ZDMwNmI4Y2Q3YjU0NTljYzM1MDNlNjc5NGNkNTM2MTE5ZDE1ZTUyIn0%3D; expires=Sat, 19-Sep-2020 12:35:44 GMT; Max-Age=7200; path=/; httponly
+18:35:44  [DEBUG] : http-outgoing-0 << Content-Encoding: gzip
+18:35:44  [DEBUG] : http-outgoing-0 << Expires: Sat, 19 Sep 2020 10:35:43 GMT
+18:35:44  [DEBUG] : Connection can be kept alive indefinitely
+18:35:44  [DEBUG] : Cookie accepted [okay_session="eyJpdiI6IlwvMWpBdmdONlJqS2VQTnRlSjZXVXZ3PT0iLCJ2YWx1ZSI6Ik03MmVGdWlncEczUzFtRHhQTDVJMGIyZXlYSTQwSG40...", version:0, domain:oms-dev.xk12.cn, path:/, expiry:Sat Sep 19 20:35:44 CST 2020]
+18:35:44  [DEBUG] : Connection [id: 0][route: {}->http://oms-dev.xk12.cn:80] can be kept alive indefinitely
+18:35:44  [DEBUG] : http-outgoing-0: set socket timeout to 0
+18:35:44  [DEBUG] : Connection released: [id: 0][route: {}->http://oms-dev.xk12.cn:80][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+18:35:44  [DEBUG] : Connection manager is shutting down
+18:35:44  [DEBUG] : http-outgoing-0: Close connection
+18:35:44  [DEBUG] : Connection manager shut down
+18:35:44  [INFO ] : 解析的实际结果是：名称 不能为空。
+18:35:44  [ERROR] : 校验失败

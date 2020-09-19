@@ -1,9 +1,0 @@
-22:07:53  [TRACE] : This is trace
-22:07:53  [DEBUG] : This is debug.
-22:07:53  [INFO ] : This is an info.
-22:07:53  [INFO ] : ----------------------------测试开始---------------------
-22:07:53  [WARN ] : This is a warning.
-22:07:53  [ERROR] : java.lang.NumberFormatException: For input string: "ss"
-java.lang.NumberFormatException: For input string: "ss"
-	at com.testing.class5.TestLog4j.main(TestLog4j.java:25) [classes/:?]
-22:07:53  [FATAL] : This is a fatal error.
