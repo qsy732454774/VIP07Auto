@@ -1,0 +1,736 @@
+23:50:23  [DEBUG] : CookieSpec selected: default
+23:50:23  [DEBUG] : Auth cache not set in the context
+23:50:23  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:23  [DEBUG] : Connection leased: [id: 0][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:23  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:23  [DEBUG] : Connection established 192.168.1.4:62799<->47.105.110.138:8081
+23:50:23  [DEBUG] : http-outgoing-0: set socket timeout to 15000
+23:50:23  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:23  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:23  [DEBUG] : http-outgoing-0 >> POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : http-outgoing-0 >> Content-Length: 0
+23:50:23  [DEBUG] : http-outgoing-0 >> Content-Type: application/x-www-form-urlencoded
+23:50:23  [DEBUG] : http-outgoing-0 >> Content-Encoding: UTF-8
+23:50:23  [DEBUG] : http-outgoing-0 >> Host: www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : http-outgoing-0 >> Connection: Keep-Alive
+23:50:23  [DEBUG] : http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:23  [DEBUG] : http-outgoing-0 >> Accept-Encoding: gzip,deflate
+23:50:23  [DEBUG] : http-outgoing-0 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "Content-Length: 0[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 >> "[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 << "HTTP/1.1 200 [\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 << "Content-Length: 73[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 << "[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-0 << "{"status":200,"msg":"success","token":"58278b8b4c554b2e9ca52b46301d7caf"}"
+23:50:23  [DEBUG] : http-outgoing-0 << HTTP/1.1 200 
+23:50:23  [DEBUG] : http-outgoing-0 << Content-Type: text/html;charset=UTF-8
+23:50:23  [DEBUG] : http-outgoing-0 << Content-Length: 73
+23:50:23  [DEBUG] : http-outgoing-0 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:23  [DEBUG] : Connection can be kept alive indefinitely
+23:50:23  [DEBUG] : Connection [id: 0][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:23  [DEBUG] : http-outgoing-0: set socket timeout to 0
+23:50:23  [DEBUG] : Connection released: [id: 0][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:23  [DEBUG] : Connection manager is shutting down
+23:50:23  [DEBUG] : http-outgoing-0: Close connection
+23:50:23  [DEBUG] : Connection manager shut down
+23:50:23  [INFO ] : 请求的结果是{"status":200,"msg":"success","token":"58278b8b4c554b2e9ca52b46301d7caf"}
+23:50:23  [INFO ] : 解析的实际结果是：200
+23:50:23  [INFO ] : 校验成功
+23:50:23  [DEBUG] : CookieSpec selected: default
+23:50:23  [DEBUG] : Auth cache not set in the context
+23:50:23  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:23  [DEBUG] : Connection leased: [id: 1][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:23  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:23  [DEBUG] : Connection established 192.168.1.4:62800<->47.105.110.138:8081
+23:50:23  [DEBUG] : http-outgoing-1: set socket timeout to 15000
+23:50:23  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:23  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:23  [DEBUG] : http-outgoing-1 >> POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : http-outgoing-1 >> Content-Length: 0
+23:50:23  [DEBUG] : http-outgoing-1 >> Content-Type: application/x-www-form-urlencoded
+23:50:23  [DEBUG] : http-outgoing-1 >> Content-Encoding: UTF-8
+23:50:23  [DEBUG] : http-outgoing-1 >> Host: www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : http-outgoing-1 >> Connection: Keep-Alive
+23:50:23  [DEBUG] : http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:23  [DEBUG] : http-outgoing-1 >> Accept-Encoding: gzip,deflate
+23:50:23  [DEBUG] : http-outgoing-1 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "Content-Length: 0[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 >> "[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 << "HTTP/1.1 200 [\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 << "Content-Length: 73[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 << "[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-1 << "{"status":200,"msg":"success","token":"b4ac24e560c84223890384deef690724"}"
+23:50:23  [DEBUG] : http-outgoing-1 << HTTP/1.1 200 
+23:50:23  [DEBUG] : http-outgoing-1 << Content-Type: text/html;charset=UTF-8
+23:50:23  [DEBUG] : http-outgoing-1 << Content-Length: 73
+23:50:23  [DEBUG] : http-outgoing-1 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:23  [DEBUG] : Connection can be kept alive indefinitely
+23:50:23  [DEBUG] : Connection [id: 1][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:23  [DEBUG] : http-outgoing-1: set socket timeout to 0
+23:50:23  [DEBUG] : Connection released: [id: 1][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:23  [DEBUG] : Connection manager is shutting down
+23:50:23  [DEBUG] : http-outgoing-1: Close connection
+23:50:23  [DEBUG] : Connection manager shut down
+23:50:23  [INFO ] : 请求的结果是{"status":200,"msg":"success","token":"b4ac24e560c84223890384deef690724"}
+23:50:23  [DEBUG] : CookieSpec selected: default
+23:50:23  [DEBUG] : Auth cache not set in the context
+23:50:23  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:23  [DEBUG] : Connection leased: [id: 2][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:23  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:23  [DEBUG] : Connection established 192.168.1.4:62801<->47.105.110.138:8081
+23:50:23  [DEBUG] : http-outgoing-2: set socket timeout to 15000
+23:50:23  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:23  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:23  [DEBUG] : http-outgoing-2 >> POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : http-outgoing-2 >> Content-Length: 0
+23:50:23  [DEBUG] : http-outgoing-2 >> Content-Type: application/x-www-form-urlencoded
+23:50:23  [DEBUG] : http-outgoing-2 >> Content-Encoding: UTF-8
+23:50:23  [DEBUG] : http-outgoing-2 >> Host: www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : http-outgoing-2 >> Connection: Keep-Alive
+23:50:23  [DEBUG] : http-outgoing-2 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:23  [DEBUG] : http-outgoing-2 >> Accept-Encoding: gzip,deflate
+23:50:23  [DEBUG] : http-outgoing-2 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "Content-Length: 0[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "Connection: Keep-Alive[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 >> "[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 << "HTTP/1.1 200 [\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 << "Content-Length: 73[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 << "[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-2 << "{"status":200,"msg":"success","token":"55ca45d7add94a75aac61cc611c71d79"}"
+23:50:23  [DEBUG] : http-outgoing-2 << HTTP/1.1 200 
+23:50:23  [DEBUG] : http-outgoing-2 << Content-Type: text/html;charset=UTF-8
+23:50:23  [DEBUG] : http-outgoing-2 << Content-Length: 73
+23:50:23  [DEBUG] : http-outgoing-2 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:23  [DEBUG] : Connection can be kept alive indefinitely
+23:50:23  [DEBUG] : Connection [id: 2][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:23  [DEBUG] : http-outgoing-2: set socket timeout to 0
+23:50:23  [DEBUG] : Connection released: [id: 2][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:23  [DEBUG] : Connection manager is shutting down
+23:50:23  [DEBUG] : http-outgoing-2: Close connection
+23:50:23  [DEBUG] : Connection manager shut down
+23:50:23  [INFO ] : 请求的结果是{"status":200,"msg":"success","token":"55ca45d7add94a75aac61cc611c71d79"}
+23:50:23  [DEBUG] : CookieSpec selected: default
+23:50:23  [DEBUG] : Auth cache not set in the context
+23:50:23  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:23  [DEBUG] : Connection leased: [id: 3][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:23  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:23  [DEBUG] : Connection established 192.168.1.4:62802<->47.105.110.138:8081
+23:50:23  [DEBUG] : http-outgoing-3: set socket timeout to 15000
+23:50:23  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:23  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:23  [DEBUG] : http-outgoing-3 >> POST /inter/HTTP/auth HTTP/1.1
+23:50:23  [DEBUG] : http-outgoing-3 >> Content-Length: 0
+23:50:23  [DEBUG] : http-outgoing-3 >> Content-Type: application/x-www-form-urlencoded
+23:50:23  [DEBUG] : http-outgoing-3 >> Content-Encoding: UTF-8
+23:50:23  [DEBUG] : http-outgoing-3 >> Host: www.testingedu.com.cn:8081
+23:50:23  [DEBUG] : http-outgoing-3 >> Connection: Keep-Alive
+23:50:23  [DEBUG] : http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:23  [DEBUG] : http-outgoing-3 >> Accept-Encoding: gzip,deflate
+23:50:23  [DEBUG] : http-outgoing-3 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "Content-Length: 0[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:23  [DEBUG] : http-outgoing-3 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-3 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-3 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-3 << "Content-Length: 73[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-3 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-3 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-3 << "{"status":200,"msg":"success","token":"93d9c7a096d24db082aa81ce12af37bd"}"
+23:50:24  [DEBUG] : http-outgoing-3 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-3 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-3 << Content-Length: 73
+23:50:24  [DEBUG] : http-outgoing-3 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 3][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-3: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 3][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-3: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":200,"msg":"success","token":"93d9c7a096d24db082aa81ce12af37bd"}
+23:50:24  [INFO ] : 解析的实际结果是：200
+23:50:24  [INFO ] : 校验成功
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 4][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62803<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-4: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-4 >> POST /inter/HTTP/auth HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-4 >> Content-Length: 0
+23:50:24  [DEBUG] : http-outgoing-4 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-4 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-4 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-4 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-4 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-4 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-4 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "Content-Length: 0[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 << "Content-Length: 73[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-4 << "{"status":200,"msg":"success","token":"9e2c6021877148fc89eca5113fefa533"}"
+23:50:24  [DEBUG] : http-outgoing-4 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-4 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-4 << Content-Length: 73
+23:50:24  [DEBUG] : http-outgoing-4 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 4][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-4: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 4][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-4: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":200,"msg":"success","token":"9e2c6021877148fc89eca5113fefa533"}
+23:50:24  [INFO ] : 解析的实际结果是：200
+23:50:24  [ERROR] : 校验失败
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 5][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62804<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-5: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-5 >> POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-5 >> Content-Length: 29
+23:50:24  [DEBUG] : http-outgoing-5 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-5 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-5 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-5 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-5 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-5 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-5 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "Content-Length: 29[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 >> "username=Will&password=123456"
+23:50:24  [DEBUG] : http-outgoing-5 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 << "Content-Length: 35[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-5 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:50:24  [DEBUG] : http-outgoing-5 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-5 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-5 << Content-Length: 35
+23:50:24  [DEBUG] : http-outgoing-5 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 5][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-5: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 5][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-5: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":405,"msg":"非法请求"}
+23:50:24  [INFO ] : 解析的实际结果是：非法请求
+23:50:24  [INFO ] : 校验成功
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 6][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62805<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-6: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-6 >> POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-6 >> Content-Length: 29
+23:50:24  [DEBUG] : http-outgoing-6 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-6 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-6 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-6 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-6 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-6 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-6 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "Content-Length: 29[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 >> "username=Will&password=123456"
+23:50:24  [DEBUG] : http-outgoing-6 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 << "Content-Length: 35[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-6 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:50:24  [DEBUG] : http-outgoing-6 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-6 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-6 << Content-Length: 35
+23:50:24  [DEBUG] : http-outgoing-6 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 6][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-6: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 6][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-6: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":405,"msg":"非法请求"}
+23:50:24  [INFO ] : 解析的实际结果是：非法请求
+23:50:24  [INFO ] : 校验成功
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 7][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62806<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-7: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-7 >> POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-7 >> Content-Length: 29
+23:50:24  [DEBUG] : http-outgoing-7 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-7 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-7 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-7 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-7 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-7 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-7 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "Content-Length: 29[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 >> "username=Will&password=123456"
+23:50:24  [DEBUG] : http-outgoing-7 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 << "Content-Length: 35[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-7 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:50:24  [DEBUG] : http-outgoing-7 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-7 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-7 << Content-Length: 35
+23:50:24  [DEBUG] : http-outgoing-7 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 7][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-7: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 7][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-7: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":405,"msg":"非法请求"}
+23:50:24  [INFO ] : 解析的实际结果是：非法请求
+23:50:24  [INFO ] : 校验成功
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 8][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62807<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-8: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-8 >> POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-8 >> Content-Length: 29
+23:50:24  [DEBUG] : http-outgoing-8 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-8 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-8 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-8 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-8 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-8 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-8 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "Content-Length: 29[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 >> "username=Will&password=123456"
+23:50:24  [DEBUG] : http-outgoing-8 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 << "Content-Length: 35[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-8 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:50:24  [DEBUG] : http-outgoing-8 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-8 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-8 << Content-Length: 35
+23:50:24  [DEBUG] : http-outgoing-8 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 8][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-8: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 8][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-8: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":405,"msg":"非法请求"}
+23:50:24  [INFO ] : 解析的实际结果是：非法请求
+23:50:24  [INFO ] : 校验成功
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 9][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62808<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-9: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-9 >> POST /inter/HTTP/auth HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-9 >> Content-Length: 0
+23:50:24  [DEBUG] : http-outgoing-9 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-9 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-9 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-9 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-9 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-9 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-9 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "Content-Length: 0[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 << "Content-Length: 73[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-9 << "{"status":200,"msg":"success","token":"52d5d706d1704d34ba6cbb5288657b67"}"
+23:50:24  [DEBUG] : http-outgoing-9 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-9 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-9 << Content-Length: 73
+23:50:24  [DEBUG] : http-outgoing-9 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 9][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-9: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 9][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-9: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":200,"msg":"success","token":"52d5d706d1704d34ba6cbb5288657b67"}
+23:50:24  [INFO ] : 解析的实际结果是：200
+23:50:24  [INFO ] : 校验成功
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 10][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62809<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-10: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-10 >> POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-10 >> Content-Length: 29
+23:50:24  [DEBUG] : http-outgoing-10 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-10 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-10 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-10 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-10 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-10 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-10 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "Content-Length: 29[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 >> "username=Will&password=123456"
+23:50:24  [DEBUG] : http-outgoing-10 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 << "Content-Length: 35[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-10 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:50:24  [DEBUG] : http-outgoing-10 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-10 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-10 << Content-Length: 35
+23:50:24  [DEBUG] : http-outgoing-10 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 10][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-10: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 10][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-10: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":405,"msg":"非法请求"}
+23:50:24  [INFO ] : 解析的实际结果是：405
+23:50:24  [ERROR] : 校验失败
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 11][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62810<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-11: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-11 >> POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-11 >> Content-Length: 29
+23:50:24  [DEBUG] : http-outgoing-11 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-11 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-11 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-11 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-11 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-11 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-11 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "Content-Length: 29[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 >> "username=Will&password=123456"
+23:50:24  [DEBUG] : http-outgoing-11 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 << "Content-Length: 35[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 << "Date: Mon, 19 Oct 2020 15:50:22 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-11 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:50:24  [DEBUG] : http-outgoing-11 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-11 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-11 << Content-Length: 35
+23:50:24  [DEBUG] : http-outgoing-11 << Date: Mon, 19 Oct 2020 15:50:22 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 11][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-11: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 11][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-11: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":405,"msg":"非法请求"}
+23:50:24  [INFO ] : 解析的实际结果是：405
+23:50:24  [ERROR] : 校验失败
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 12][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62811<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-12: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/logout HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-12 >> POST /inter/HTTP/logout HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-12 >> Content-Length: 0
+23:50:24  [DEBUG] : http-outgoing-12 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-12 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-12 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-12 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-12 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-12 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-12 >> "POST /inter/HTTP/logout HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "Content-Length: 0[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 << "Content-Length: 35[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 << "Date: Mon, 19 Oct 2020 15:50:23 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-12 << "{"status":405,"msg":"[0xe9][0x9d][0x9e][0xe6][0xb3][0x95][0xe8][0xaf][0xb7][0xe6][0xb1][0x82]"}"
+23:50:24  [DEBUG] : http-outgoing-12 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-12 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-12 << Content-Length: 35
+23:50:24  [DEBUG] : http-outgoing-12 << Date: Mon, 19 Oct 2020 15:50:23 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 12][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-12: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 12][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-12: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":405,"msg":"非法请求"}
+23:50:24  [INFO ] : 解析的实际结果是：405
+23:50:24  [ERROR] : 校验失败
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 13][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62812<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-13: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/auth HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-13 >> POST /inter/HTTP/auth HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-13 >> Content-Length: 0
+23:50:24  [DEBUG] : http-outgoing-13 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-13 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-13 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-13 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-13 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-13 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-13 >> "POST /inter/HTTP/auth HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "Content-Length: 0[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 << "HTTP/1.1 200 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 << "Content-Type: text/html;charset=UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 << "Content-Length: 73[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 << "Date: Mon, 19 Oct 2020 15:50:23 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-13 << "{"status":200,"msg":"success","token":"c19a0b9d9fa7410a8da113cac94c5e98"}"
+23:50:24  [DEBUG] : http-outgoing-13 << HTTP/1.1 200 
+23:50:24  [DEBUG] : http-outgoing-13 << Content-Type: text/html;charset=UTF-8
+23:50:24  [DEBUG] : http-outgoing-13 << Content-Length: 73
+23:50:24  [DEBUG] : http-outgoing-13 << Date: Mon, 19 Oct 2020 15:50:23 GMT
+23:50:24  [DEBUG] : Connection can be kept alive indefinitely
+23:50:24  [DEBUG] : Connection [id: 13][route: {}->http://www.testingedu.com.cn:8081] can be kept alive indefinitely
+23:50:24  [DEBUG] : http-outgoing-13: set socket timeout to 0
+23:50:24  [DEBUG] : Connection released: [id: 13][route: {}->http://www.testingedu.com.cn:8081][total available: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : http-outgoing-13: Close connection
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是{"status":200,"msg":"success","token":"c19a0b9d9fa7410a8da113cac94c5e98"}
+23:50:24  [DEBUG] : CookieSpec selected: default
+23:50:24  [DEBUG] : Auth cache not set in the context
+23:50:24  [DEBUG] : Connection request: [route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection leased: [id: 14][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+23:50:24  [DEBUG] : Opening connection {}->http://www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : Connecting to www.testingedu.com.cn/47.105.110.138:8081
+23:50:24  [DEBUG] : Connection established 192.168.1.4:62813<->47.105.110.138:8081
+23:50:24  [DEBUG] : http-outgoing-14: set socket timeout to 15000
+23:50:24  [DEBUG] : Executing request POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : Target auth state: UNCHALLENGED
+23:50:24  [DEBUG] : Proxy auth state: UNCHALLENGED
+23:50:24  [DEBUG] : http-outgoing-14 >> POST /inter/HTTP/login HTTP/1.1
+23:50:24  [DEBUG] : http-outgoing-14 >> Content-Length: 15
+23:50:24  [DEBUG] : http-outgoing-14 >> Content-Type: application/x-www-form-urlencoded
+23:50:24  [DEBUG] : http-outgoing-14 >> Content-Encoding: UTF-8
+23:50:24  [DEBUG] : http-outgoing-14 >> Host: www.testingedu.com.cn:8081
+23:50:24  [DEBUG] : http-outgoing-14 >> Connection: Keep-Alive
+23:50:24  [DEBUG] : http-outgoing-14 >> User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)
+23:50:24  [DEBUG] : http-outgoing-14 >> Accept-Encoding: gzip,deflate
+23:50:24  [DEBUG] : http-outgoing-14 >> "POST /inter/HTTP/login HTTP/1.1[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "Content-Length: 15[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "Content-Type: application/x-www-form-urlencoded[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "Content-Encoding: UTF-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "Host: www.testingedu.com.cn:8081[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "Connection: Keep-Alive[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_221)[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 >> "password=123456"
+23:50:24  [DEBUG] : http-outgoing-14 << "HTTP/1.1 500 [\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "Content-Type: text/html;charset=utf-8[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "Content-Language: en[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "Content-Length: 1539[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "Date: Mon, 19 Oct 2020 15:50:23 GMT[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "Connection: close[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "[\r][\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "<!doctype html><html lang="en"><head><title>HTTP Status 500 [0xe2][0x80][0x93] Internal Server Error</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 500 [0xe2][0x80][0x93] Internal Server Error</h1><hr class="line" /><p><b>Type</b> Exception Report</p><p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p><p><b>Exception</b></p><pre>java.lang.NullPointerException[\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "[0x9]java.net.URLDecoder.decode(URLDecoder.java:136)[\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "[0x9]java.net.URLDecoder.decode(URLDecoder.java:100)[\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "[0x9]com.testingedu.http.login.doPost(login.java:59)[\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServlet.java:661)[\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "[0x9]javax.servlet.http.HttpServlet.service(HttpServl"
+23:50:24  [DEBUG] : http-outgoing-14 << HTTP/1.1 500 
+23:50:24  [DEBUG] : http-outgoing-14 << Content-Type: text/html;charset=utf-8
+23:50:24  [DEBUG] : http-outgoing-14 << Content-Language: en
+23:50:24  [DEBUG] : http-outgoing-14 << Content-Length: 1539
+23:50:24  [DEBUG] : http-outgoing-14 << Date: Mon, 19 Oct 2020 15:50:23 GMT
+23:50:24  [DEBUG] : http-outgoing-14 << Connection: close
+23:50:24  [DEBUG] : http-outgoing-14 << "et.java:742)[\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "[0x9]org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)[\n]"
+23:50:24  [DEBUG] : http-outgoing-14 << "</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class="line" /><h3>Apache Tomcat/8.5.16</h3></body></html>"
+23:50:24  [DEBUG] : http-outgoing-14: Close connection
+23:50:24  [DEBUG] : Connection discarded
+23:50:24  [DEBUG] : Connection released: [id: 14][route: {}->http://www.testingedu.com.cn:8081][total available: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+23:50:24  [DEBUG] : Connection manager is shutting down
+23:50:24  [DEBUG] : Connection manager shut down
+23:50:24  [INFO ] : 请求的结果是<!doctype html><html lang="en"><head><title>HTTP Status 500 – Internal Server Error</title><style type="text/css">h1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;} h2 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:16px;} h3 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:14px;} body {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;} b {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;} p {font-family:Tahoma,Arial,sans-serif;background:white;color:black;font-size:12px;} a {color:black;} a.name {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 500 – Internal Server Error</h1><hr class="line" /><p><b>Type</b> Exception Report</p><p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p><p><b>Exception</b></p><pre>java.lang.NullPointerException
+	java.net.URLDecoder.decode(URLDecoder.java:136)
+	java.net.URLDecoder.decode(URLDecoder.java:100)
+	com.testingedu.http.login.doPost(login.java:59)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
+	javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+</pre><p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p><hr class="line" /><h3>Apache Tomcat/8.5.16</h3></body></html>

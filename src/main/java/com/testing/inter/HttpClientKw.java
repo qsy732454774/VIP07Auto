@@ -45,7 +45,7 @@ public class HttpClientKw {
 	private boolean useCookie=true;
 
 	//加一个 用于存储头域的Map
-	private Map<String,String> headerMap;
+	public Map<String,String> headerMap;
 
 	//加一个用于指示是否使用存储的头域Map的标志位
 	private boolean useHeader=true;
@@ -337,6 +337,12 @@ public class HttpClientKw {
 				}
 			}
 			switch(type){
+				case "text":
+					StringEntity posttextParams = new StringEntity(param);
+					posttextParams.setContentType("text/xml");
+					posttextParams.setContentEncoding("UTF-8");
+					post.setEntity(posttextParams);
+					break;
 				case "url":
 					// 创建urlencoded格式的请求实体，设置编码为utf8
 					StringEntity postParams = new StringEntity(param);
@@ -381,7 +387,6 @@ public class HttpClientKw {
 			result = DeCode(result);
 			// 释放返回实体
 			EntityUtils.consume(entity);
-			AutoLogger.log.info(result);
 			// 关闭返回包
 			response.close();
 		} catch (Exception e) {
@@ -426,15 +431,24 @@ public class HttpClientKw {
 	 * 添加头域键值到headerMap中
 	 * 使用存储的头信息
 	 */
-	public void useHeader(String key,String Value){
-		headerMap.put(key,Value);
+	public void useHeader(){
 		useHeader=true;
 	}
 
 	/**
+	 * 将头域键值对添加到管理头域的map中
+	 * @param key
+	 * @param Value
+	 */
+	public void addHeader(String key,String Value){
+		headerMap.put(key,Value);
+	}
+
+
+	/**
 	 * 不使用存储的头信息
 	 */
-	public void notUserHeader(){
+	public void notUseHeader(){
 		useHeader=false;
 	}
 

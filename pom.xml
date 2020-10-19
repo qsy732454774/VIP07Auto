@@ -61,6 +61,28 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.73</version>
         </dependency>
+        <!--Axis2依赖，SOAP接口测试-->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-kernel</artifactId>
+            <version>1.7.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-http</artifactId>
+            <version>1.7.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-adb</artifactId>
+            <version>1.7.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-local</artifactId>
+            <version>1.7.9</version>
+        </dependency>
+
 
 
     </dependencies>
