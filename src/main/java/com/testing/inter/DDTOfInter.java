@@ -67,7 +67,7 @@ public class DDTOfInter {
             AutoLogger.log.error("执行Post请求失败");
         }
     }
-    public void doPostUrl(String url,String param){
+    public void post(String url,String param){
         try {
             url=toParam(url);
             param=toParam(param);
@@ -78,9 +78,20 @@ public class DDTOfInter {
             AutoLogger.log.error("执行PostUrl请求失败");
         }
     }
+    public void postJson(String url,String param){
+        try {
+            url=toParam(url);
+            param=toParam(param);
+            responseResult=key.doPostUrl(url,param);
+            interResult.writeCell(writeLine,ACT_COL,responseResult);
+        } catch (Exception e) {
+            AutoLogger.log.error(e.fillInStackTrace());
+            AutoLogger.log.error("执行PostJson请求失败");
+        }
+    }
 
     //基于jsonPath进行断言。
-    public void assertJsonPath(String jsonPath,String expectResult){
+    public void assertJsonSame(String jsonPath,String expectResult){
         try {
             String actualResult = JSONPath.read(responseResult, jsonPath).toString();
             AutoLogger.log.info("解析的实际结果是："+actualResult);
@@ -102,6 +113,51 @@ public class DDTOfInter {
             AutoLogger.log.error(e.fillInStackTrace());
             AutoLogger.log.error("解析Json并断言失败");
 
+        }
+    }
+
+    /**
+     * 断言解析的Json中包含某内容
+     * @param jsonPath json表达式
+     * @param expectResult 预期包含的内容
+     */
+    public void  assertJsonContains(String jsonPath,String expectResult){
+        try {
+            String actualResult = JSONPath.read(responseResult, jsonPath).toString();
+            AutoLogger.log.info("解析的实际结果是："+actualResult);
+            if(actualResult!=null){
+                if(actualResult.contains(expectResult)){
+                    AutoLogger.log.info("校验成功");
+                    interResult.writeCell(writeLine,RES_COL,PASS);
+                }
+                else{
+                    interResult.writeFailCell(writeLine,RES_COL,FAIL);
+                }
+            }
+            else{
+                AutoLogger.log.error("解析出的结果是空");
+                interResult.writeFailCell(writeLine,RES_COL,FAIL);
+            }
+        } catch (Exception e) {
+            interResult.writeFailCell(writeLine,RES_COL,FAIL);
+            AutoLogger.log.error(e.fillInStackTrace());
+            AutoLogger.log.error("解析Json并断言失败");
+
+        }
+    }
+    public void assertTextContains(String expect){
+        try {
+            if (responseResult.contains(expect)){
+                AutoLogger.log.info("校验成功");
+                interResult.writeCell(writeLine,RES_COL,PASS);
+            }
+            else{
+                interResult.writeFailCell(writeLine,RES_COL,FAIL);
+            }
+        } catch (Exception e) {
+            interResult.writeFailCell(writeLine,RES_COL,FAIL);
+            AutoLogger.log.error(e.fillInStackTrace());
+            AutoLogger.log.error("返回为空，请检查调用逻辑");
         }
     }
 

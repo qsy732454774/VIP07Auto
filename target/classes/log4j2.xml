@@ -31,7 +31,7 @@
 
 	<loggers>
 		<!-- 日志记录的等级 -->
-		<root level="debug">
+		<root level="info">
 		<!-- 引入配置好的console和文件输出 -->
 			<appender-ref ref="Console" />
 			<appender-ref ref="MyFile"></appender-ref>
